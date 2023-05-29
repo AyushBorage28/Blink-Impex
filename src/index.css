@@ -1,0 +1,53 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+  
+.carousel-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.2; /* Adjust the line-height as needed */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  width: 80%; /* Adjust the width as per your preference */
+  max-width: 900px; /* Set a maximum width for better responsiveness */
+}
+
+.carousel-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.carousel-image {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 767px) {
+  .carousel-text {
+    font-size: 1.9rem; /* Adjust the font-size for smaller devices */
+    font-weight: 600;
+  }
+}
+
+.group{
+  display: none;
+}
+  
+.indiana-scroll-container{
+  border-radius: 0;
+  overflow: hidden;
+}
+
+
