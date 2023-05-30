@@ -6,9 +6,9 @@ const Footer = () => {
       <div class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
         <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
           <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
-          <img src={logo} className="mr-0  h-16 sm:h-19" alt="Logo" />
-              
-            <span class="ml-2 text-xl">Blink Impex</span>
+            <img src={logo} className="mr-0  h-16 sm:h-19" alt="Logo" />
+
+            <span class="ml-0 text-xl">Blink Impex</span>
           </a>
           <p class="mt-2 text-sm text-gray-500">
             Air plant banjo lyft occupy retro adaptogen indego

@@ -4,7 +4,7 @@ import React from "react";
 const Hero = () => {
   return (
     <div className="relative h-56 md:h-screen ">
-      <Carousel slideInterval={50000000}>
+      <Carousel slideInterval={5000}>
         <div className="carousel-item">
           <img
             alt="..."

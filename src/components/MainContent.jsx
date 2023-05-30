@@ -22,7 +22,7 @@ const MainContent = () => {
             </h1>
             <p className="mb-8 leading-relaxed">
               {" "}
-              Blink Impex is located in <b>Morbi, Gujarat, India</b>. We are
+              Blink Impex is located in Morbi, Gujarat, India. We are
               specializing in manufacturing a wide range of porcelain tiles,
               slabs and sanitarywares.
             </p>
