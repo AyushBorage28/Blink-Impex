@@ -2,7 +2,10 @@ import React from "react";
 
 const Mission = () => {
   return (
-    <section className="text-gray-600 body-font" style={{backgroundColor:'rgb(243 244 246)'}}>
+    <section
+      className="text-gray-600 body-font"
+      style={{ backgroundColor: "rgb(243 244 246)" }}
+    >
       <div className="container px-5 py-24 mx-auto">
         <div className="text-center mb-20">
           <h1 className="sm:text-3xl text-2xl font-bold title-font text-gray-900 mb-4">
@@ -14,12 +17,12 @@ const Mission = () => {
             pug.
           </p>
           <div className="flex mt-6 justify-center">
-            <div className="w-16 h-1 rounded-full bg-indigo-500 inline-flex"></div>
+            <div className="w-16 h-1 rounded-full bg-yellow-300 inline-flex"></div>
           </div>
         </div>
         <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
           <div className="p-4 md:w-1/3 flex flex-col text-center items-center">
-            <div className="w-20 h-20 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5 flex-shrink-0">
+            <div className="w-20 h-20 inline-flex items-center justify-center rounded-full bg-yellow-300 text-yellow-400 mb-5 flex-shrink-0">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="w-10 h-10"
@@ -39,7 +42,10 @@ const Mission = () => {
                 and Leading the Market with Technical Expertise for a
                 Sustainable Future of our Talented Employees.
               </p>
-              <a className="mt-3 text-indigo-500 inline-flex items-center" href="/">
+              <a
+                className="mt-3 text-yellow-400 inline-flex items-center"
+                href="/"
+              >
                 Learn More
                 <svg
                   fill="none"
@@ -56,7 +62,7 @@ const Mission = () => {
             </div>
           </div>
           <div className="p-4 md:w-1/3 flex flex-col text-center items-center">
-            <div className="w-20 h-20 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5 flex-shrink-0">
+            <div className="w-20 h-20 inline-flex items-center justify-center rounded-full bg-yellow-300 text-yellow-400 mb-5 flex-shrink-0">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -71,11 +77,14 @@ const Mission = () => {
                 Vision
               </h2>
               <p className="leading-relaxed text-base">
-                Innovation has always been larson's principle philosophy.
-                Drawing inspiration from breathtaking nature to mesmerizing
-                ambience to delivered in its true from and style.
+                Innovation has Always been Larson's Principle philosophy.
+                Drawing Inspiration from Breathtaking Nature to Mesmerizing
+                Ambience to Delivered in its True Form and Style.
               </p>
-              <a className="mt-3 text-indigo-500 inline-flex items-center" href="/">
+              <a
+                className="mt-3 text-yellow-400 inline-flex items-center"
+                href="/"
+              >
                 Learn More
                 <svg
                   fill="none"
@@ -92,7 +101,7 @@ const Mission = () => {
             </div>
           </div>
           <div className="p-4 md:w-1/3 flex flex-col text-center items-center">
-            <div className="w-20 h-20 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5 flex-shrink-0">
+            <div className="w-20 h-20 inline-flex items-center justify-center rounded-full bg-yellow-300 text-yellow-400 mb-5 flex-shrink-0">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="40"
@@ -113,10 +122,13 @@ const Mission = () => {
               </h2>
               <p className="leading-relaxed text-base">
                 Authenticity in Action: Sustaining Excellence and Unmatched
-                Superiority to Deliver Unparalleled Quality, Ensuring Value for
-                Money for Our Valued Customers.
+                Superiority to Deliver Unparalleled Quality, Ensuring Unbeatable
+                Value for Money for Our Valued Customers.
               </p>
-              <a className="mt-3 text-indigo-500 inline-flex items-center" href="/">
+              <a
+                className="mt-3 text-yellow-400 inline-flex items-center"
+                href="/"
+              >
                 Learn More
                 <svg
                   fill="none"
@@ -133,7 +145,6 @@ const Mission = () => {
             </div>
           </div>
         </div>
-       
       </div>
     </section>
   );
