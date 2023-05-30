@@ -4,7 +4,8 @@
 @tailwind utilities;
 
 *{
-    font-family: 'Montserrat', sans-serif;
+  font-family: 'Alegreya', serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
   
@@ -29,6 +30,8 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   width: 80%; /* Adjust the width as per your preference */
   max-width: 900px; /* Set a maximum width for better responsiveness */
+  font-family: 'Poppins', serif;
+
 }
 
 .carousel-item {
