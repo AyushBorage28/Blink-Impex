@@ -1,42 +1,41 @@
-import { Carousel } from "flowbite-react";
+import { Carousel } from "@material-tailwind/react";
 import React from "react";
 
 const Hero = () => {
   return (
-    <div className="relative h-56 md:h-screen ">
-      <Carousel slideInterval={5000}>
-        <div className="carousel-item">
-          <img
-            alt="..."
-            src=".\src\assets\home-carousal-1.jpg"
-            className="carousel-image"
-          />
-          <h1 className="carousel-text">
-            Unleash your Design Potential with Porcelain Tiles
-          </h1>
+    <Carousel
+      transition={{ duration: 2 }}
+      className="rounded-xl"
+      navigation={({ setActiveIndex, activeIndex, length }) => (
+        <div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
+          {new Array(length).fill("").map((_, i) => (
+            <span
+              key={i}
+              className={`block h-1 cursor-pointer rounded-2xl transition-all content-[''] ${
+                activeIndex === i ? "bg-white w-8" : "bg-white/50 w-4"
+              }`}
+              onClick={() => setActiveIndex(i)}
+            />
+          ))}
         </div>
-        <div className="carousel-item">
-          <img
-            alt="..."
-            src=".\src\assets\home-carousal-2.jpg"
-            className="carousel-image"
-          />
-          <h1 className="carousel-text">
-            Elevate your Space with Elegant and Durable Porcelain Tiles
-          </h1>
-        </div>
-        <div className="carousel-item">
-          <img
-            alt="..."
-            src=".\src\assets\home-carousal-3.jpg"
-            className="carousel-image"
-          />
-          <h1 className="carousel-text">
-            Perfect Blend of <br /> Style and Resilience
-          </h1>
-        </div>
-      </Carousel>
-    </div>
+      )}
+    >
+      <img
+        src=".\src\assets\13.png"
+        alt="image 1"
+        className="h-full w-full object-cover"
+      />
+      <img
+        src=".\src\assets\12.png"
+        alt="image 2"
+        className="h-full w-full object-cover"
+      />
+      <img
+        src=".\src\assets\11.png"
+        alt="image 3"
+        className="h-full w-full object-cover"
+      />
+    </Carousel>
   );
 };
 

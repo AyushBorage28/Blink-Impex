@@ -1,40 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 *{
-  font-family: 'Alegreya', serif;
-  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  color-scheme: dark;
+
 }
 
-  
-.carousel-container {
+body{
+  background-color: #2c2c2c;
+}
+
+.black-gradient {
+  background: #000000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #434343,
+    #000000
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #434343,
+    #000000
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+
+
+
+.footer{
+  background-color: #2c2c2c;
+}
+
+
+/* .carousel-container {
   height: 90vh;
-  max-height: calc(100vh - 6rem); /* Adjust the value to leave a small portion visible below */
+  max-height: calc(100vh - 6rem); 
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
-.carousel-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 4rem;
-  font-weight: bold;
-  text-align: center;
-  line-height: 1.2; /* Adjust the line-height as needed */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  width: 80%; /* Adjust the width as per your preference */
-  max-width: 900px; /* Set a maximum width for better responsiveness */
-  font-family: 'Poppins', serif;
 
-}
 
-.carousel-item {
+/* .carousel-item {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -45,26 +61,18 @@
   max-width: 100%;
   height: auto;
  
-}
+} */
 
-@media (max-width: 767px) {
-  .carousel-text {
-    font-size: 1.9rem; /* Adjust the font-size for smaller devices */
-    font-weight: 600;
-  }
-}
 
-.group{
+/* .group{
   display: none;
 }
   
 .indiana-scroll-container{
   border-radius: 0;
   overflow: hidden;
-}
+} */
 
- #flowbite-navbar-collapse>ul>li > a:hover{
-color: red;
- }
+
 
 

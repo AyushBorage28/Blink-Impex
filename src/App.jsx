@@ -1,19 +1,20 @@
-import { useState} from "react";
-import React from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
-import { Button, Navbar } from "flowbite-react";
+import { BrowserRouter } from "react-router-dom";
+import Header from "./components/Header.jsx";
+import Hero from "./components/Hero.jsx";
+import MainContent from "./components/MainContent.jsx";
+import Footer from "./components/Footer.jsx";
 
-function App() {
-  const [count, setCount] = useState(0);
-
+const App = () => {
   return (
-    
-<></>
-
-
+    <BrowserRouter>
+      <div className="relative z-0 bg-primary">
+        <Header />
+        <Hero/>
+      </div>
+      <MainContent/>
+      <Footer/>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
