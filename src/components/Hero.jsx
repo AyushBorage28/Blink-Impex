@@ -1,4 +1,5 @@
 import { Carousel } from "@material-tailwind/react";
+import { carouselimage1, carouselimage2, carouselimage3 } from "../assets";
 import React from "react";
 
 const Hero = () => {
@@ -21,17 +22,17 @@ const Hero = () => {
       )}
     >
       <img
-        src=".\src\assets\13.png"
+        src={carouselimage1}
         alt="image 1"
         className="h-full w-full object-cover"
       />
       <img
-        src=".\src\assets\12.png"
+        src={carouselimage2}
         alt="image 2"
         className="h-full w-full object-cover"
       />
       <img
-        src=".\src\assets\11.png"
+        src={carouselimage3}
         alt="image 3"
         className="h-full w-full object-cover"
       />
