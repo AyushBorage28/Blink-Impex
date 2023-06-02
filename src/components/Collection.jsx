@@ -26,7 +26,7 @@ const Collection = () => {
 
   return (
     <section className="text-gray-400  body-font">
-      <div className="container px-5 py-24 mx-auto">
+      <div className="container px-5 py-16 mx-auto">
         <div className="flex flex-col text-center w-full mb-20">
           <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">
             OUR <span style={{ color: "#f2b400" }}>COLLECTIONS</span>
@@ -35,7 +35,7 @@ const Collection = () => {
             Discover our handcrafted collection of exquisite ceramics, blending
             artistry with functionality. From modern designs to traditional
             motifs, elevate your home decor and find unique treasures that speak
-            to your Soul
+            to your soul.
           </p>
         </div>
         <div className="flex flex-wrap m-3">

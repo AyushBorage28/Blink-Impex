@@ -4,6 +4,8 @@ import Hero from "./components/Hero.jsx";
 import MainContent from "./components/MainContent.jsx";
 import Footer from "./components/Footer.jsx";
 import Collection from "./components/Collection.jsx";
+import Statistics from "./components/Statistics.jsx";
+import ContactUs from "./components/ContactUs.jsx";
 
 const App = () => {
   return (
@@ -14,6 +16,8 @@ const App = () => {
       </div>
       <MainContent/>
       <Collection/>
+      <Statistics/>
+      <ContactUs/>
       <Footer/>
     </BrowserRouter>
   );
