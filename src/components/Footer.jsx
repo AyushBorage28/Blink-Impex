@@ -2,7 +2,7 @@ import React from "react";
 import logo from "../assets/logo.png";
 const Footer = () => {
   return (
-    <footer className="text-gray-400  body-font">
+    <footer className="text-gray-400  body-font mt-auto">
       <div className="bg-gray-900 bg-opacity-75">
         <div className="container px-5 pb-5 md:pb-0 mx-auto flex items-center sm:flex-row flex-col">
           <a
@@ -38,9 +38,9 @@ const Footer = () => {
                 data-name="Layer 1"
                 fill="none"
                 stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 className="w-5 h-5"
                 viewBox="0 0 24 24"
                 id="youtube"
@@ -56,9 +56,9 @@ const Footer = () => {
               <svg
                 fill="none"
                 stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 className="w-5 h-5"
                 viewBox="0 0 24 24"
               >
@@ -73,9 +73,9 @@ const Footer = () => {
             >
               <svg
                 fill="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 className="w-5 h-5"
                 viewBox="0 0 24 24"
               >
@@ -91,9 +91,9 @@ const Footer = () => {
               <svg
                 fill="currentColor"
                 stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="0"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="0"
                 className="w-5 h-5"
                 viewBox="0 0 24 24"
               >

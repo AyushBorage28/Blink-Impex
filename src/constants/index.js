@@ -4,23 +4,27 @@ import sanitaryImage from "../assets/Sanitaryware.png";
 
 export const navLinks = [
     {
-        id: "About",
+        id: "/",
+        title: "HOME",
+    }, 
+    {
+        id: "about",
         title: "ABOUT",
     },
     {
-        id: "Products",
+        id: "products",
         title: "PRODUCTS",
     },
     {
-        id: "Catalogue",
+        id: "catalogue",
         title: "CATALOGUE",
     },
     {
-        id: "Technical Area",
+        id: "technicalArea",
         title: "TECHNICAL AREA",
     },
     {
-        id: "Contact Us",
+        id: "contactUs",
         title: "CONTACT US",
     },
 ];

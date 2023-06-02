@@ -54,36 +54,31 @@ const Navbar = () => {
           className="flex items-center gap-2"
           onClick={() => {
             setActive("");
+
             window.scrollTo(0, 0);
           }}
         >
           <img
             src={logo}
             alt="logo"
-            className=" w-14 md:w-20 object-contain"
+            className=" w-14 md:w-24 object-contain"
             style={{ padding: "0", margin: "0", lineHeight: "0" }}
           />
         </Link>
 
-        <ul className="list-none hidden justify-center sm:flex flex-row gap-10">
+        <ul
+          className={`list-none hidden justify-center sm:flex flex-row gap-10 ${
+            isMobile ? "" : "flex-grow justify-center"
+          }`}
+        >
           {navLinks.map((nav) => (
             <li
               key={nav.id}
               className={`${
-                active === nav.title ? "text-yellow-800" : "text-white"
-              } hover:text-yellow-800 text-[17px] font-medium cursor-pointer`}
-              onClick={() => setActive(nav.title)}
+                location.pathname === nav.id ? "text-yellow-800" : "text-white"
+              } hover:text-yellow-800 text-[18px] font-medium cursor-pointer`}
             >
-              <a
-                href={
-                  nav.id == "blogs"
-                    ? "https://medium.com/@ayushborage28"
-                    : `#${nav.id}`
-                }
-                target={nav.id == "blogs" ? "_blank" : "_self"}
-              >
-                {nav.title}
-              </a>
+              <Link to={nav.id}>{nav.title}</Link>
             </li>
           ))}
         </ul>
@@ -106,14 +101,16 @@ const Navbar = () => {
                 <li
                   key={nav.id}
                   className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                    active === nav.title ? "text-white" : "text-black-100"
+                    location.pathname === nav.id
+                      ? "text-white"
+                      : "text-black-100"
                   }`}
                   onClick={() => {
                     setToggle(!toggle);
                     setActive(nav.title);
                   }}
                 >
-                  <a href={`#${nav.id}`}>{nav.title}</a>
+                  <Link to={nav.id}>{nav.title}</Link>
                 </li>
               ))}
             </ul>
