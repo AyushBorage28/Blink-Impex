@@ -32,6 +32,27 @@ body{
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+.fade-in {
+  opacity: 0;
+  transform: translateX(50px);
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.size-list >li >a:hover{
+  color: #f2b400;
+}
+
 
 
 

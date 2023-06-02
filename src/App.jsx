@@ -3,15 +3,17 @@ import Header from "./components/Header.jsx";
 import Hero from "./components/Hero.jsx";
 import MainContent from "./components/MainContent.jsx";
 import Footer from "./components/Footer.jsx";
+import Collection from "./components/Collection.jsx";
 
 const App = () => {
   return (
     <BrowserRouter>
-      <div className="relative z-0 bg-primary">
+      <div className="relative z-20 bg-primary">
         <Header />
         <Hero/>
       </div>
       <MainContent/>
+      <Collection/>
       <Footer/>
     </BrowserRouter>
   );

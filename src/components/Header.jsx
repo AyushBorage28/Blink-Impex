@@ -8,29 +8,45 @@ const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
-      if (scrollTop > 100) {
+      if (scrollTop > 200) {
         setScrolled(true);
       } else {
         setScrolled(false);
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    const handleResize = () => {
+      const isMobileDevice = window.innerWidth <= 768; // Adjust the breakpoint as per your needs
+      setIsMobile(isMobileDevice);
+    };
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleResize);
+
+    handleResize(); // Call the resize handler initially
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   return (
     <nav
       className={`${
         styles.paddingX
-      } w-full flex items-center py-5 fixed top-0 z-50  ${
-        scrolled ? "bg-primary" : "bg-transparent"
-      } `}
+      } w-full flex items-center py-0 fixed top-0 z-50 ${
+        scrolled || isMobile ? "bg-primary I shadow-md" : "bg-transparent"
+      }`}
+      style={{
+        boxShadow:
+          scrolled ? "0 1px 4px rgba(242, 180, 0, 0.5)" : "none",
+      }}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <Link
@@ -41,7 +57,12 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
+          <img
+            src={logo}
+            alt="logo"
+            className=" w-14 md:w-20 object-contain"
+            style={{ padding: "0", margin: "0", lineHeight: "0" }}
+          />
         </Link>
 
         <ul className="list-none hidden justify-center sm:flex flex-row gap-10">
@@ -49,8 +70,8 @@ const Navbar = () => {
             <li
               key={nav.id}
               className={`${
-                active === nav.title ? "text-yellow-400" : "text-white"
-              } hover:text-yellow-400 text-[18px] font-medium cursor-pointer`}
+                active === nav.title ? "text-yellow-800" : "text-white"
+              } hover:text-yellow-800 text-[17px] font-medium cursor-pointer`}
               onClick={() => setActive(nav.title)}
             >
               <a
