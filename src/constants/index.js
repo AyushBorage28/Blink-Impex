@@ -1,6 +1,6 @@
 import porcelainTilesImage from "../assets/porcelain-tiles.png";
 import massiveSlabImage from "../assets/massive-slab.png";
-import sanitaryImage from "../assets/sanitaryware.png";
+import sanitaryImage from "../assets/Sanitaryware.png";
 
 export const navLinks = [
     {
