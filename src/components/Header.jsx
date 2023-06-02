@@ -45,7 +45,7 @@ const Navbar = () => {
       }`}
       style={{
         boxShadow:
-          scrolled ? "0 1px 4px rgba(242, 180, 0, 0.5)" : "none",
+          scrolled || isMobile ? "0 1px 4px rgba(242, 180, 0, 0.5)" : "none",
       }}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
