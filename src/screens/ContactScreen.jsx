@@ -1,51 +1,15 @@
 import React, { useEffect, useState } from "react";
 import backgroundImage from "../assets/contact-bg.jpg";
 import mobileBackgroundImage from "../assets/contact-bg-mobile.jpg";
+import BackgroundImage from "../components/BackgroundImage";
+
 const ContactScreen = () => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  const detectMobile = () => {
-    if (window.innerWidth < 768) {
-      setIsMobile(true);
-    } else {
-      setIsMobile(false);
-    }
-  };
-
-  useEffect(() => {
-    detectMobile();
-    window.addEventListener("resize", detectMobile);
-    return () => window.removeEventListener("resize", detectMobile);
-  }, []);
-
   return (
     <>
-      <div
-        className={`responsive-container ${isMobile ? "mobile" : ""}`}
-        style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(${backgroundImage})`,
-          backgroundSize: "cover",
-          backgroundPosition: isMobile ? "center bottom" : "center top",
-          backgroundRepeat: "no-repeat",
-          width: "100%",
-          height: isMobile ? "35vh" : "57vh",
-          boxShadow: "0 5px 20px rgba(0, 0, 0, 0.3)",
-        }}
-      >
-        {/* Render different image for mobile devices */}
-        {isMobile && (
-          <div
-            style={{
-              backgroundImage: `url(${mobileBackgroundImage})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center top",
-              backgroundRepeat: "no-repeat",
-              width: "100%",
-              height: "100%",
-            }}
-          ></div>
-        )}
-      </div>
+      <BackgroundImage
+        backgroundImage={backgroundImage}
+        mobileBackgroundImage={mobileBackgroundImage}
+      ></BackgroundImage>
       <section className="text-gray-400 body-font relative pb-16 ">
         <div className="flex flex-col text-center w-full pt-0  mb-20 "></div>
         <div className="container px-5 py-24 pt-0 mx-auto flex sm:flex-nowrap flex-wrap">
