@@ -1,5 +1,4 @@
-import React from "react";
-import Header from "../components/Header.jsx";
+import React, { useState, useEffect } from "react";
 import Hero from "../components/Hero.jsx";
 import Collection from "../components/Collection.jsx";
 import Statistics from "../components/Statistics.jsx";
