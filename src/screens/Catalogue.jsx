@@ -1,6 +1,7 @@
 import React from "react";
 import backgroundImage from "../assets/catalogue-bg.jpg";
 import mobileBackgroundImage from "../assets/catalogue-bg-mobile.jpg";
+import downloadIcon from "../assets/download-icon.jpg";
 import BackgroundImage from "../components/BackgroundImage";
 
 const Catalogue = () => {
@@ -28,7 +29,7 @@ const Catalogue = () => {
                 <img
                   alt="team"
                   className="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
-                  src="https://dummyimage.com/80x80"
+                  src={downloadIcon}
                 />
                 <div className="flex-grow">
                   <h2 className="text-white title-font font-medium">
@@ -43,7 +44,7 @@ const Catalogue = () => {
                 <img
                   alt="team"
                   className="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
-                  src="https://dummyimage.com/84x84"
+                  src={downloadIcon}
                 />
                 <div className="flex-grow">
                   <h2 className="text-white title-font font-medium">
@@ -58,7 +59,7 @@ const Catalogue = () => {
                 <img
                   alt="team"
                   className="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
-                  src="https://dummyimage.com/88x88"
+                  src={downloadIcon}
                 />
                 <div className="flex-grow">
                   <h2 className="text-white title-font font-medium">
@@ -73,7 +74,7 @@ const Catalogue = () => {
                 <img
                   alt="team"
                   className="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
-                  src="https://dummyimage.com/90x90"
+                  src={downloadIcon}
                 />
                 <div className="flex-grow">
                   <h2 className="text-white title-font font-medium">
@@ -88,7 +89,7 @@ const Catalogue = () => {
                 <img
                   alt="team"
                   className="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
-                  src="https://dummyimage.com/94x94"
+                  src={downloadIcon}
                 />
                 <div className="flex-grow">
                   <h2 className="text-white title-font font-medium">
@@ -103,7 +104,7 @@ const Catalogue = () => {
                 <img
                   alt="team"
                   className="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
-                  src="https://dummyimage.com/98x98"
+                  src={downloadIcon}
                 />
                 <div className="flex-grow">
                   <h2 className="text-white title-font font-medium">
@@ -118,7 +119,7 @@ const Catalogue = () => {
                 <img
                   alt="team"
                   className="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
-                  src="https://dummyimage.com/100x90"
+                  src={downloadIcon}
                 />
                 <div className="flex-grow">
                   <h2 className="text-white title-font font-medium">
@@ -133,7 +134,7 @@ const Catalogue = () => {
                 <img
                   alt="team"
                   className="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
-                  src="https://dummyimage.com/104x94"
+                  src={downloadIcon}
                 />
                 <div className="flex-grow">
                   <h2 className="text-white title-font font-medium">
@@ -148,7 +149,7 @@ const Catalogue = () => {
                 <img
                   alt="team"
                   className="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
-                  src="https://dummyimage.com/108x98"
+                  src={downloadIcon}
                 />
                 <div className="flex-grow">
                   <h2 className="text-white title-font font-medium">
