@@ -24,22 +24,16 @@ const App = () => {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      {isLoading ? (
-        <LogoLoader />
-      ) : (
-        <>
-          <Header />
-          <Routes>
-            <Route exact path="/" element={<HomeScreen />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/technicalArea" element={<TechnicalArea />} />
-            <Route path="/catalogue" element={<Catalogue />} />
-            <Route path="/exports" element={<Exports />} />
-            <Route path="/contactUs" element={<ContactScreen />} />
-          </Routes>
-          <Footer />
-        </>
-      )}
+      <Header />
+      <Routes>
+        <Route exact path="/" element={<HomeScreen />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/technicalArea" element={<TechnicalArea />} />
+        <Route path="/catalogue" element={<Catalogue />} />
+        <Route path="/exports" element={<Exports />} />
+        <Route path="/contactUs" element={<ContactScreen />} />
+      </Routes>
+      <Footer />
     </BrowserRouter>
   );
 };
