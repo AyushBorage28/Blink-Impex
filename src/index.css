@@ -43,5 +43,23 @@ footer{
   background-color: #2c2c2c;
 }
 
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:20px;
+	right:100px;
+	background-color:#f2b400;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px #070707;
+  z-index:100;
+}
+
+.my-float{
+	margin-top:16px;
+}
 
 
