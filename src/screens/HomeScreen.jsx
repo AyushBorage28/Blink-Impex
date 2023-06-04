@@ -6,15 +6,28 @@ import ContactUs from "../components/ContactUs.jsx";
 import MainContent from "../components/MainContent.jsx";
 
 const HomeScreen = () => {
+  const [isContentLoaded, setIsContentLoaded] = useState(false);
+
+  useEffect(() => {
+    // Simulating data loading delay
+    setTimeout(() => {
+      setIsContentLoaded(true);
+    }, 3000);
+  }, []);
+
   return (
     <>
-      <div className="relative z-20 bg-primary">
+      <div className={`relative z-20 bg-primary ${isContentLoaded ? 'content-loaded' : ''}`}>
         <Hero />
       </div>
-      <MainContent />
-      <Collection />
-      <Statistics />
-      <ContactUs />
+      {isContentLoaded && (
+        <>
+          <MainContent />
+          <Collection />
+          <Statistics />
+          <ContactUs />
+        </>
+      )}
     </>
   );
 };
