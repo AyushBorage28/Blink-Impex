@@ -3,7 +3,7 @@ import HomeScreen from "./screens/HomeScreen.jsx";
 import About from "./screens/About.jsx";
 import TechnicalArea from "./screens/TechnicalArea.jsx";
 import Catalogue from "./screens/Catalogue.jsx";
-import Products from "./screens/Products.jsx";
+import Exports from "./screens/Exports.jsx";
 import ContactScreen from "./screens/ContactScreen.jsx";
 import Header from "./components/Header.jsx";
 import Footer from "./components/Footer.jsx";
@@ -19,7 +19,7 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/technicalArea" element={<TechnicalArea />} />
         <Route path="/catalogue" element={<Catalogue />} />
-        <Route path="/products" element={<Products />} />
+        <Route path="/exports" element={<Exports />} />
         <Route path="/contactUs" element={<ContactScreen />} />
       </Routes>
       <Footer />
