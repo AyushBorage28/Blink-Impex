@@ -10,6 +10,7 @@ import Header from "./components/Header.jsx";
 import Footer from "./components/Footer.jsx";
 import ScrollToTop from "./components/ScrollToTop.jsx";
 import LogoLoader from "./components/LogoLoader.jsx";
+import PageNotFound from "./screens/PageNotFound.jsx";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -18,7 +19,7 @@ const App = () => {
     // Simulating data loading delay
     setTimeout(() => {
       setIsLoading(false);
-    }, 3000);
+    }, 4000);
   }, []);
 
   return (
@@ -36,6 +37,7 @@ const App = () => {
             <Route path="/catalogue" element={<Catalogue />} />
             <Route path="/exports" element={<Exports />} />
             <Route path="/contactUs" element={<ContactScreen />} />
+            <Route path="*" element={<PageNotFound />} />
           </Routes>
           <Footer />
         </>
@@ -45,3 +47,6 @@ const App = () => {
 };
 
 export default App;
+
+
+// 404pagenotfound
