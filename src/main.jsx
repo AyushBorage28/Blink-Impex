@@ -9,14 +9,5 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <App />
   </ThemeProvider>
 );
-// ReactDOM.createRoot(document.getElementById("root")).render(
-//   <BrowserRouter>
 
-//           <Header />
-//           {/* <Hero /> */}
 
-//       {/* <MainContent />
-//       <Mission/>
-//       <Footer/> */}
-//   </BrowserRouter>
-//

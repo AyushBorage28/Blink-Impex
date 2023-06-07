@@ -53,7 +53,7 @@ const collectionItems = [
     {
         title: "SANITARY WARE",
         imageSrc: sanitaryImage,
-        description: "Sleek | Hygienic | Modern",
+        description: "Pristine | Luxurious | Hygienic",
         sizes: ["Wash Basin", "Water Closet", "Pan", "Accessories"],
     },
 ];

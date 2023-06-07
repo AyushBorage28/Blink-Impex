@@ -25,9 +25,9 @@ const App = () => {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      {/* {isLoading ? (
+      {isLoading ? (
         <LogoLoader />
-      ) : ( */}
+      ) : (
         <>
           <Header />
           <Routes>
@@ -41,12 +41,9 @@ const App = () => {
           </Routes>
           <Footer />
         </>
-      {/* )} */}
+      )}
     </BrowserRouter>
   );
 };
 
 export default App;
-
-
-// 404pagenotfound
