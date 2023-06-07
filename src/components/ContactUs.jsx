@@ -1,4 +1,5 @@
 import React from "react";
+import worldMap from "../assets/world-map.png";
 
 const ContactUs = () => {
   return (
@@ -9,19 +10,11 @@ const ContactUs = () => {
         </h1>
       </div>
       <div className="container px-5 py-24 pt-0 mx-auto flex sm:flex-nowrap flex-wrap">
-        <div className="lg:w-2/3 md:w-1/2 bg-gray-900 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
-          <iframe
-            width="100%"
-            height="100%"
-            title="map"
-            className="absolute inset-0"
-            frameBorder="0"
-            marginHeight="0"
-            marginWidth="0"
-            src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=22.8053852,70.8185317+(Blink%20Impex)&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-            style={{ filter: "grayscale(1), contrast(1.2) opacity(0.16)" }}
-          ></iframe>
-          <div className="bg-gray-900 relative flex flex-wrap py-6 rounded shadow-md">
+        <div className="lg:w-2/3 md:w-1/2 bg-gray-900 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-center relative">
+        
+          <img className="p-0" src={worldMap} alt="" />
+       
+          <div className="bg-gray-900 absolute flex flex-wrap py-6 rounded shadow-md items-center justify-center">
             <div className="lg:w-1/2 px-6">
               <h2 className="title-font font-semibold text-white tracking-widest text-xs">
                 ADDRESS
