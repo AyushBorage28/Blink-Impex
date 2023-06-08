@@ -76,7 +76,7 @@ const Navbar = () => {
               key={nav.id}
               className={`${
                 location.pathname === nav.id ? "text-yellow-800" : "text-white"
-              } hover:text-yellow-800 text-[18px] font-medium cursor-pointer`}
+              } hover:text-yellow-800 text-3 font-medium cursor-pointer`}
             >
               <Link to={nav.id}>{nav.title}</Link>
             </li>

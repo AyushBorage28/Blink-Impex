@@ -14,6 +14,7 @@ const About = () => {
         mobileBackgroundPosition="center center"
       ></BackgroundImage>
       <Mission />
+      <Infrastructure/>
     </>
   );
 };

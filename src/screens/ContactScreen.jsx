@@ -10,8 +10,7 @@ const ContactScreen = () => {
         backgroundImage={backgroundImage}
         mobileBackgroundImage={mobileBackgroundImage}
       ></BackgroundImage>
-      <section className="text-gray-400 body-font relative pb-16 "
-       >
+      <section className="text-gray-400 body-font relative pb-16 ">
         <div className="flex flex-col text-center w-full pt-0  mb-20 "></div>
         <div className="container px-5 py-24 pt-0 mx-auto flex sm:flex-nowrap flex-wrap">
           <div className="lg:w-2/3 md:w-1/2 bg-gray-900 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
@@ -37,7 +36,9 @@ const ContactScreen = () => {
                   EMAIL
                 </h2>
                 <a className="text-yellow-800 leading-relaxed">
-                  example@email.com
+                  export@blinkimpex.com
+                  <br />
+                  blinkimpex@gmail.com
                 </a>
                 <h2 className="title-font font-semibold text-white tracking-widest text-xs mt-4">
                   PHONE

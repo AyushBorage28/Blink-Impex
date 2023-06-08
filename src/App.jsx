@@ -11,6 +11,7 @@ import Footer from "./components/Footer.jsx";
 import ScrollToTop from "./components/ScrollToTop.jsx";
 import LogoLoader from "./components/LogoLoader.jsx";
 import PageNotFound from "./screens/PageNotFound.jsx";
+import ComingSoon from "./components/ComingSoon.jsx";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -35,7 +36,7 @@ const App = () => {
             <Route path="/about" element={<About />} />
             <Route path="/technicalArea" element={<TechnicalArea />} />
             <Route path="/catalogue" element={<Catalogue />} />
-            <Route path="/exports" element={<Exports />} />
+            <Route path="/exports" element={<ComingSoon />} />
             <Route path="/contactUs" element={<ContactScreen />} />
             <Route path="*" element={<PageNotFound />} />
           </Routes>
