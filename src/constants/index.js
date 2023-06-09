@@ -11,7 +11,6 @@ export const navLinks = [
         id: "about",
         title: "ABOUT",
     },
-
     {
         id: "catalogue",
         title: "CATALOGUE",
@@ -19,6 +18,16 @@ export const navLinks = [
     {
         id: "technicalArea",
         title: "TECHNICAL AREA",
+        dropdown: [
+            {
+                id: "packingDetails",
+                title: "Packing Details",
+            },
+            {
+                id: "tileCalculator",
+                title: "Tile Calculator",
+            },
+        ],
     },
     {
         id: "exports",
@@ -29,6 +38,7 @@ export const navLinks = [
         title: "CONTACT US",
     },
 ];
+
 
 
 const collectionItems = [
