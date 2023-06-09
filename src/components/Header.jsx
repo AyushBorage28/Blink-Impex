@@ -76,7 +76,7 @@ const Navbar = () => {
         </Link>
 
         <ul
-          className={`list-none hidden justify-center sm:flex flex-row gap-10 ${
+          className={`list-none hidden justify-center sm:flex flex-row gap-10 cursor-pointer ${
             isMobile ? "" : "flex-grow justify-center"
           }`}
         >
