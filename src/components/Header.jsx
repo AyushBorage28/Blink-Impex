@@ -92,24 +92,19 @@ const Navbar = () => {
                 onMouseEnter={isMobile ? null : handleDropdownToggle}
                 onMouseLeave={isMobile ? null : handleDropdownClose}
               >
-                <span
-                  className="text-3 font-medium"
-                  
-                >
-                  {nav.title}
-                </span>
+                <span className="text-3 font-medium">{nav.title}</span>
                 {!isMobile && toggle && (
-                  <ul className="absolute top-full left-0 w-44 py-2 bg-primary shadow-lg rounded-lg">
+                  <ul className="absolute top-full left-0 w-[10rem] py-2 bg-primary shadow-lg text-[14px] rounded-lg">
                     {nav.dropdown.map((dropdownItem) => (
                       <li
                         key={dropdownItem.id}
                         className={`px-4 py-2 hover:bg-yellow-800`}
-                        style={
-                          dropdownItem.id !==
-                          nav.dropdown[nav.dropdown.length - 1].id
-                            ? styles.separator["& > li:not(:last-child)"]
-                            : {}
-                        }
+                        // style={
+                        //   dropdownItem.id !==
+                        //   nav.dropdown[nav.dropdown.length - 1].id
+                        //     ? styles.separator["& > li:not(:last-child)"]
+                        //     : {}
+                        // }
                       >
                         <Link to={dropdownItem.id}>{dropdownItem.title}</Link>
                       </li>
@@ -176,7 +171,9 @@ const Navbar = () => {
                           xmlns="http://www.w3.org/2000/svg"
                           className={`${
                             active === nav.id ? "rotate-180" : ""
-                          } h-4 w-4 ml-2 transition-transform duration-300 transform`}
+                          } h-4 w-4 ml-2 transition-transform duration-300 transform ${
+                            active === nav.id ? "text-yellow-800" : "text-white"
+                          }`}
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke="currentColor"
@@ -204,7 +201,7 @@ const Navbar = () => {
                       {nav.dropdown.map((dropdownItem) => (
                         <li
                           key={dropdownItem.id}
-                          className="cursor-pointer pb-2"
+                          className="cursor-pointer pb-2  text-[14px]"
                           onClick={() => {
                             setActive("");
                             setToggle(false);
