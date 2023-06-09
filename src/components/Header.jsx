@@ -199,7 +199,9 @@ const Navbar = () => {
                             setToggle(false);
                             handleDropdownClose();
                             if (isMobile) {
-                              window.location.href = dropdownItem.id;
+                              <Link to={dropdownItem.id}>
+                                {dropdownItem.title}
+                              </Link>;
                             }
                           }}
                         >
