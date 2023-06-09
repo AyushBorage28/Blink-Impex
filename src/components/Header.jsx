@@ -34,7 +34,11 @@ const Navbar = () => {
       window.removeEventListener("resize", handleResize);
       window.removeEventListener("scroll", handleScroll);
     };
+
+    
   }, []);
+
+
 
   const handleDropdownToggle = () => {
     setToggle(!toggle);
@@ -42,7 +46,9 @@ const Navbar = () => {
 
   const handleDropdownClose = () => {
     setToggle(false);
+    setActive("");
   };
+
 
   return (
     <nav
@@ -91,7 +97,7 @@ const Navbar = () => {
                 onMouseEnter={isMobile ? null : handleDropdownToggle}
                 onMouseLeave={isMobile ? null : handleDropdownClose}
               >
-                <Link to={nav.id} className="text-3 font-medium cursor-pointer">
+                <Link to={nav.id} className="text-3 font-medium cursor-pointer">         
                   {nav.title}
                 </Link>
                 {!isMobile && toggle && (
@@ -127,7 +133,14 @@ const Navbar = () => {
             src={toggle ? close : menu}
             alt="menu"
             className="w-[20px] h-[20px] object-contain"
-            onClick={() => setToggle(!toggle)}
+            onClick={() => {
+              if (isMobile && active === "") {
+                setToggle(!toggle);
+              } else {
+                setActive("");
+                setToggle(false);
+              }
+            }}
           />
           <div
             className={`${
@@ -138,22 +151,23 @@ const Navbar = () => {
               {navLinks.map((nav) => (
                 <li
                   key={nav.id}
-                  className={`font-poppins font-medium hover:text-yellow-800 cursor-pointer text-[16px] ${
+                  className={`font-poppins font-medium cursor-pointer text-[16px] ${
                     location.pathname === nav.id
                       ? "text-white"
                       : "text-black-100"
                   }`}
                 >
+                 
+                  
                   <div
                     onClick={() => {
                       if (isMobile && nav.dropdown) {
                         setActive(active === nav.id ? "" : nav.id);
-                        handleDropdownToggle();
                       }
                     }}
                     className="flex items-center"
                   >
-                    <span>{nav.title}</span>
+                     <Link to={nav.id}>{nav.title}</Link>
                     {nav.dropdown && (
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -175,7 +189,7 @@ const Navbar = () => {
                   </div>
                   {nav.dropdown && (
                     <ul
-                      className={`ml-4 mt-2 ${
+                      className={`ml-2 mt-2  ${
                         active === nav.id
                           ? "max-h-[200px] opacity-100"
                           : "max-h-0 opacity-0"
@@ -184,8 +198,15 @@ const Navbar = () => {
                       {nav.dropdown.map((dropdownItem) => (
                         <li
                           key={dropdownItem.id}
-                          className="hover:text-yellow-800 cursor-pointer"
-                          onClick={handleDropdownClose}
+                          className=" cursor-pointer pb-2"
+                          onClick={() => {
+                            setActive("");
+                            setToggle(false);
+                            handleDropdownClose();
+                            if (isMobile) {
+                              window.location.href = dropdownItem.id;
+                            }
+                          }}
                         >
                           <Link to={dropdownItem.id}>{dropdownItem.title}</Link>
                         </li>

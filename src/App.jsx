@@ -12,6 +12,8 @@ import ScrollToTop from "./components/ScrollToTop.jsx";
 import LogoLoader from "./components/LogoLoader.jsx";
 import PageNotFound from "./screens/PageNotFound.jsx";
 import ComingSoon from "./components/ComingSoon.jsx";
+import TileCalculator from "./screens/TileCalculator.jsx";
+import PackingDetails from "./screens/PackingDetails.jsx";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -34,7 +36,8 @@ const App = () => {
           <Routes>
             <Route exact path="/" element={<HomeScreen />} />
             <Route path="/about" element={<About />} />
-            <Route path="/technicalArea" element={<TechnicalArea />} />
+            <Route path="/packingDetails" element={<PackingDetails />} />
+            <Route path="/tileCalculator" element={<TileCalculator />} />
             <Route path="/catalogue" element={<Catalogue />} />
             <Route path="/exports" element={<ComingSoon />} />
             <Route path="/contactUs" element={<ContactScreen />} />

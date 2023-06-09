@@ -36,9 +36,11 @@ const Hero = () => {
           </p>
 
           <div className="flex justify-center">
-            <button className="ml-0 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg">
-              Read More
-            </button>
+            <a href="/about">
+              <button className="ml-0 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg">
+                Read More
+              </button>
+            </a>
           </div>
         </div>
       </div>

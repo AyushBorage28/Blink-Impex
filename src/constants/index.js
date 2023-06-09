@@ -21,11 +21,11 @@ export const navLinks = [
         dropdown: [
             {
                 id: "packingDetails",
-                title: "Packing Details",
+                title: "PACKING DETAILS",
             },
             {
                 id: "tileCalculator",
-                title: "Tile Calculator",
+                title: "TILE CALCULATOR",
             },
         ],
     },
