@@ -34,11 +34,7 @@ const Navbar = () => {
       window.removeEventListener("resize", handleResize);
       window.removeEventListener("scroll", handleScroll);
     };
-
-    
   }, []);
-
-
 
   const handleDropdownToggle = () => {
     setToggle(!toggle);
@@ -48,7 +44,6 @@ const Navbar = () => {
     setToggle(false);
     setActive("");
   };
-
 
   return (
     <nav
@@ -97,9 +92,7 @@ const Navbar = () => {
                 onMouseEnter={isMobile ? null : handleDropdownToggle}
                 onMouseLeave={isMobile ? null : handleDropdownClose}
               >
-                <Link to={nav.id} className="text-3 font-medium cursor-pointer">         
-                  {nav.title}
-                </Link>
+                <span className="text-3 font-medium">{nav.title}</span>
                 {!isMobile && toggle && (
                   <ul className="absolute top-full left-0 w-44 py-2 bg-primary shadow-lg rounded-lg">
                     {nav.dropdown.map((dropdownItem) => (
@@ -152,13 +145,11 @@ const Navbar = () => {
                 <li
                   key={nav.id}
                   className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                    location.pathname === nav.id
+                    location.pathname === nav.id && !nav.dropdown
                       ? "text-white"
                       : "text-black-100"
                   }`}
                 >
-                 
-                  
                   <div
                     onClick={() => {
                       if (isMobile && nav.dropdown) {
@@ -167,24 +158,28 @@ const Navbar = () => {
                     }}
                     className="flex items-center"
                   >
-                     <Link to={nav.id}>{nav.title}</Link>
-                    {nav.dropdown && (
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className={`${
-                          active === nav.id ? "rotate-180" : ""
-                        } h-4 w-4 ml-2 transition-transform duration-300 transform`}
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M19 9l-7 7-7-7"
-                        />
-                      </svg>
+                    {nav.dropdown ? (
+                      <>
+                        <span>{nav.title}</span>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className={`${
+                            active === nav.id ? "rotate-180" : ""
+                          } h-4 w-4 ml-2 transition-transform duration-300 transform`}
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M19 9l-7 7-7-7"
+                          />
+                        </svg>
+                      </>
+                    ) : (
+                      <Link to={nav.id}>{nav.title}</Link>
                     )}
                   </div>
                   {nav.dropdown && (
@@ -198,7 +193,7 @@ const Navbar = () => {
                       {nav.dropdown.map((dropdownItem) => (
                         <li
                           key={dropdownItem.id}
-                          className=" cursor-pointer pb-2"
+                          className="cursor-pointer pb-2"
                           onClick={() => {
                             setActive("");
                             setToggle(false);
