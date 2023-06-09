@@ -92,13 +92,24 @@ const Navbar = () => {
                 onMouseEnter={isMobile ? null : handleDropdownToggle}
                 onMouseLeave={isMobile ? null : handleDropdownClose}
               >
-                <span className="text-3 font-medium">{nav.title}</span>
+                <span
+                  className="text-3 font-medium"
+                  
+                >
+                  {nav.title}
+                </span>
                 {!isMobile && toggle && (
                   <ul className="absolute top-full left-0 w-44 py-2 bg-primary shadow-lg rounded-lg">
                     {nav.dropdown.map((dropdownItem) => (
                       <li
                         key={dropdownItem.id}
-                        className="px-4 py-2 hover:bg-yellow-800"
+                        className={`px-4 py-2 hover:bg-yellow-800`}
+                        style={
+                          dropdownItem.id !==
+                          nav.dropdown[nav.dropdown.length - 1].id
+                            ? styles.separator["& > li:not(:last-child)"]
+                            : {}
+                        }
                       >
                         <Link to={dropdownItem.id}>{dropdownItem.title}</Link>
                       </li>
