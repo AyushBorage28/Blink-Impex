@@ -63,14 +63,13 @@ const Navbar = () => {
           className="flex items-center gap-2"
           onClick={() => {
             setActive("");
-
             window.scrollTo(0, 0);
           }}
         >
           <img
             src={logo}
             alt="logo"
-            className=" w-14 md:w-24 object-contain"
+            className="w-14 md:w-24 object-contain"
             style={{ padding: "0", margin: "0", lineHeight: "0" }}
           />
         </Link>
@@ -99,12 +98,6 @@ const Navbar = () => {
                       <li
                         key={dropdownItem.id}
                         className={`px-4 py-2 hover:bg-yellow-800`}
-                        // style={
-                        //   dropdownItem.id !==
-                        //   nav.dropdown[nav.dropdown.length - 1].id
-                        //     ? styles.separator["& > li:not(:last-child)"]
-                        //     : {}
-                        // }
                       >
                         <Link to={dropdownItem.id}>{dropdownItem.title}</Link>
                       </li>
@@ -121,11 +114,15 @@ const Navbar = () => {
                     : "text-white"
                 } hover:text-yellow-800 text-3 font-medium cursor-pointer`}
               >
-                <Link to={nav.id}>{nav.title}</Link>
+                <Link to={nav.id} onClick={handleDropdownClose}>
+                  {nav.title}
+                </Link>
               </li>
             )
           )}
         </ul>
+
+        {/* mobile menu */}
 
         <div className="sm:hidden flex flex-1 justify-end items-center">
           <img
@@ -187,7 +184,16 @@ const Navbar = () => {
                         </svg>
                       </>
                     ) : (
-                      <Link to={nav.id}>{nav.title}</Link>
+                      <Link
+                        to={nav.id}
+                        onClick={() => {
+                          setActive("");
+                          setToggle(false);
+                          handleDropdownClose();
+                        }}
+                      >
+                        {nav.title}
+                      </Link>
                     )}
                   </div>
                   {nav.dropdown && (
