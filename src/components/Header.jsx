@@ -170,7 +170,7 @@ const Navbar = () => {
                     }
                   }}
                 >
-                  <div className="flex items-center">
+                  <div className="flex items-center pb-0">
                     {nav.dropdown ? (
                       <>
                         <span>{nav.title}</span>
@@ -214,10 +214,10 @@ const Navbar = () => {
                           : "max-h-0 opacity-0"
                       } transition-all duration-300 overflow-hidden`}
                     >
-                      {nav.dropdown.map((dropdownItem) => (
+                      {nav.dropdown.map((dropdownItem, index) => (
                         <li
                           key={dropdownItem.id}
-                          className="cursor-pointer pb-2 pt-1  text-[16px]"
+                          className={`cursor-pointer pt-1 text-[16px] ${index !== nav.dropdown.length - 1 ? 'pb-2' : ''}`}
                           onClick={() => {
                             setActive("");
                             setToggle(false);
