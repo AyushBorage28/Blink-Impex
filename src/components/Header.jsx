@@ -208,7 +208,7 @@ const Navbar = () => {
                   </div>
                   {nav.dropdown && (
                     <ul
-                      className={`ml-2  ${
+                      className={`ml-0  ${
                         active === nav.id
                           ? "max-h-[200px] opacity-100"
                           : "max-h-0 opacity-0"
