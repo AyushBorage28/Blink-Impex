@@ -20,7 +20,10 @@ const Catalogue = () => {
               DOWNLOAD
             </h1>
             <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-            Discover a world of stunning ceramic tiles at your fingertips. Browse our downloadable catalogue and unleash boundless inspiration for your next design project. Experience the artistry and elegance that will transform your space into a masterpiece.
+              Discover a world of stunning ceramic tiles at your fingertips.
+              Browse our downloadable catalogue and unleash boundless
+              inspiration for your next design project. Experience the artistry
+              and elegance that will transform your space into a masterpiece.
             </p>
           </div>
           <div className="flex flex-wrap -m-2">

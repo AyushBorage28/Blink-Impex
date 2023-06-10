@@ -1,4 +1,7 @@
 import React from "react";
+import backgroundImage from "../assets/infrastructure-bg.jpg";
+import mobileBackgroundImage from "../assets//infrastructure-bg.jpg";
+import BackgroundImage from "../components/BackgroundImage";
 import infra1 from "../assets/infra-1.jpg";
 import infra2 from "../assets/infra-2.jpg";
 import infra3 from "../assets/infra-3.jpg";
@@ -22,15 +25,23 @@ const Infrastructure = () => {
     event.target.style.border = "none";
   };
 
+  
+
   return (
     <>
+      <BackgroundImage
+        backgroundImage={backgroundImage}
+        mobileBackgroundImage={mobileBackgroundImage}
+        backgroundPosition="center center"
+        mobileBackgroundPosition="center center"
+      ></BackgroundImage>
       <section className="text-gray-400 body-font">
         <div className="container px-5 py-24 mx-auto flex flex-wrap">
-          <div className="flex w-full mb-20 flex-wrap">
-            <h1 className="sm:text-3xl text-2xl text-yellow-800 font-medium title-font text-white lg:w-1/3 lg:mb-0 mb-4">
-              INFRASTRUCTURE
+          <div className="flex flex-col text-center w-full mb-12">
+            <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">
+              <span style={{ color: "#f2b400" }}>INFRASTRUCTURE</span>
             </h1>
-            <p className="lg:pl-6 lg:w-2/3 mx-auto leading-relaxed text-base">
+            <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
               Blink Impex, based in Morbi, Gujarat, India, specializes in the
               meticulous manufacturing of porcelain tiles, slabs, and sanitary
               wares. Our team of talented designers incorporates the latest
@@ -39,6 +50,7 @@ const Infrastructure = () => {
               prices.
             </p>
           </div>
+
           <div className="flex flex-wrap md:-m-2 -m-1">
             <div className="flex flex-wrap w-1/2">
               <div className="md:p-2 p-1 w-1/2">
@@ -109,13 +121,14 @@ const Infrastructure = () => {
       </section>
 
       <section className="text-gray-400 body-font">
-        <div className="container px-5 py-24 mx-auto">
-          <div className="flex flex-col text-center w-full mb-12">
-            <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">
-              SUPER MODERN{" "}
-              <span style={{ color: "#f2b400" }}>MANUFACTURING FACILITIES</span>
+        <div className="container px-5 pt-16 pb-16 mx-auto">
+          <div className="flex w-full mb-20 flex-wrap">
+            <h1 className="sm:text-3xl text-2xl text-white font-medium title-font text-white lg:w-1/3 lg:mb-0 mb-4">
+              SUPER MODERN
+             
+              <span style={{ color: "#f2b400" }}> MANUFACTURING  <br className="hidden lg:inline-block" /> FACILTIES</span>
             </h1>
-            <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
+            <p className="lg:pl-6 lg:w-2/3 mx-auto leading-relaxed text-base">
               We take pride in our world-className production facilities,
               equipped with advanced machinery, and boasting India's largest
               manufacturing plant for tiles. Our wide range of tile sizes
@@ -129,7 +142,7 @@ const Infrastructure = () => {
       </section>
 
       <section className="text-gray-400 body-font">
-        <div className="container px-5 pb-24 pt-16 mx-auto">
+        <div className="container px-5 pt-16 pb-16 mx-auto">
           <div className="text-center mb-20">
             <h1 className="sm:text-3xl text-2xl font-medium text-center title-font text-white mb-4">
               PRODUCTION SIZES{" "}
@@ -282,12 +295,12 @@ const Infrastructure = () => {
       </section>
 
       <section className="text-gray-400 body-font">
-        <div className="container px-5 pb-24 pt-16 mx-auto">
+        <div className="container px-5 pt-16 pb-24 mx-auto">
           <div className="text-center mb-20">
             <h1 className="sm:text-3xl text-2xl font-medium text-center title-font text-white mb-4">
               <span style={{ color: "#f2b400" }}>CERTIFICATES</span>
             </h1>
-            <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
+            <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto blinking-text">
               Coming Soon...
             </p>
           </div>

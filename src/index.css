@@ -68,3 +68,19 @@ footer {
     display: inline; /* Show the text */
   }
 }
+
+@keyframes blinking {
+  0% {
+    color: grey;
+  }
+  50% {
+    color: #f2b400;
+  }
+  100% {
+    color: grey;
+  }
+}
+
+.blinking-text {
+  animation: blinking 2s infinite;
+}

@@ -36,13 +36,13 @@ const Navbar = () => {
     };
   }, []);
 
-  const handleDropdownToggle = () => {
-    setToggle(!toggle);
+  const handleDropdownToggle = (navId) => {
+    setActive((prevActive) => (prevActive === navId ? "" : navId));
   };
 
   const handleDropdownClose = () => {
-    setToggle(false);
     setActive("");
+    setToggle(false);
   };
 
   return (
@@ -88,12 +88,17 @@ const Navbar = () => {
                     ? "text-yellow-800"
                     : "text-white"
                 }`}
-                onMouseEnter={isMobile ? null : handleDropdownToggle}
+                onClick={() => {
+                  if (!isMobile) {
+                    handleDropdownToggle(nav.id);
+                  }
+                }}
+                onMouseEnter={isMobile ? null : () => handleDropdownToggle(nav.id)}
                 onMouseLeave={isMobile ? null : handleDropdownClose}
               >
                 <span className="text-3 font-medium">{nav.title}</span>
-                {!isMobile && toggle && (
-                  <ul className="absolute top-full left-0 w-[10rem] py-2 bg-primary shadow-lg text-[14px] rounded-lg">
+                {!isMobile && active === nav.id && (
+                  <ul className="absolute top-full left-0 w-48 py-2 bg-primary shadow-lg text-[14px] rounded-lg">
                     {nav.dropdown.map((dropdownItem) => (
                       <li
                         key={dropdownItem.id}
@@ -114,7 +119,14 @@ const Navbar = () => {
                     : "text-white"
                 } hover:text-yellow-800 text-3 font-medium cursor-pointer`}
               >
-                <Link to={nav.id} onClick={handleDropdownClose}>
+                <Link
+                  to={nav.id}
+                  onClick={() => {
+                    setActive("");
+                    setToggle(false);
+                    handleDropdownClose();
+                  }}
+                >
                   {nav.title}
                 </Link>
               </li>
@@ -152,15 +164,13 @@ const Navbar = () => {
                       ? "text-white"
                       : "text-black-100"
                   }`}
+                  onClick={() => {
+                    if (isMobile && nav.dropdown) {
+                      handleDropdownToggle(nav.id);
+                    }
+                  }}
                 >
-                  <div
-                    onClick={() => {
-                      if (isMobile && nav.dropdown) {
-                        setActive(active === nav.id ? "" : nav.id);
-                      }
-                    }}
-                    className="flex items-center"
-                  >
+                  <div className="flex items-center">
                     {nav.dropdown ? (
                       <>
                         <span>{nav.title}</span>

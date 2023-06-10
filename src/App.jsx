@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomeScreen from "./screens/HomeScreen.jsx";
-import About from "./screens/About.jsx";
-import TechnicalArea from "./screens/TechnicalArea.jsx";
 import Catalogue from "./screens/Catalogue.jsx";
-import Exports from "./screens/Exports.jsx";
 import ContactScreen from "./screens/ContactScreen.jsx";
 import Header from "./components/Header.jsx";
 import Footer from "./components/Footer.jsx";
@@ -14,6 +11,8 @@ import PageNotFound from "./screens/PageNotFound.jsx";
 import ComingSoon from "./components/ComingSoon.jsx";
 import TileCalculator from "./screens/TileCalculator.jsx";
 import PackingDetails from "./screens/PackingDetails.jsx";
+import Infrastructure from "./components/Infrastructure.jsx";
+import CompanyProfile from "./components/CompanyProfile.jsx";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -35,7 +34,9 @@ const App = () => {
           <Header />
           <Routes>
             <Route exact path="/" element={<HomeScreen />} />
-            <Route path="/about" element={<About />} />
+            <Route path="/infrastructure" element={<Infrastructure />} />
+            <Route path="/companyProfile" element={<CompanyProfile />} />
+            <Route path="/certificate" element={<ComingSoon/>} />
             <Route path="/packingDetails" element={<PackingDetails />} />
             <Route path="/tileCalculator" element={<TileCalculator />} />
             <Route path="/catalogue" element={<Catalogue />} />

@@ -10,6 +10,20 @@ export const navLinks = [
     {
         id: "about",
         title: "ABOUT",
+        dropdown: [
+            {
+                id: "companyProfile",
+                title: "COMPANY PROFILE",
+            },
+            {
+                id: "infrastructure",
+                title: "INFRASTRUCTURE",
+            },
+            {
+                id: "certificate",
+                title: "CERTIFICATE",
+            },
+        ],
     },
     {
         id: "catalogue",
