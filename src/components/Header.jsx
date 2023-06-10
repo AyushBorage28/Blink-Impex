@@ -192,7 +192,7 @@ const Navbar = () => {
                   </div>
                   {nav.dropdown && (
                     <ul
-                      className={`ml-2 mt-2  ${
+                      className={`ml-2  ${
                         active === nav.id
                           ? "max-h-[200px] opacity-100"
                           : "max-h-0 opacity-0"
@@ -201,7 +201,7 @@ const Navbar = () => {
                       {nav.dropdown.map((dropdownItem) => (
                         <li
                           key={dropdownItem.id}
-                          className="cursor-pointer pb-2  text-[14px]"
+                          className="cursor-pointer pb-2 pt-1  text-[14px]"
                           onClick={() => {
                             setActive("");
                             setToggle(false);
