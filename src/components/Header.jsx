@@ -217,7 +217,7 @@ const Navbar = () => {
                       {nav.dropdown.map((dropdownItem) => (
                         <li
                           key={dropdownItem.id}
-                          className="cursor-pointer pb-2 pt-1  text-[14px]"
+                          className="cursor-pointer pb-2 pt-1  text-[16px]"
                           onClick={() => {
                             setActive("");
                             setToggle(false);
