@@ -17,7 +17,10 @@ const Hero = () => {
             Welcome to <span className="text-yellow-800">Blink Impex</span>
           </h3>
 
-          <h1 className="title-font sm:text-4xl text-3xl mb-4 font-bold text-white">
+          <h1
+            className="title-font sm:text-4xl text-3xl mb-4 font-bold text-white"
+           
+          >
             Empowering
             <br className="hidden lg:inline-block" /> progress through cutting
             <br className="hidden lg:inline-block" /> edge technology solutions
