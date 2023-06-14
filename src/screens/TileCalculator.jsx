@@ -56,7 +56,7 @@ const TileCalculator = () => {
         <div className="flex flex-col md:flex-row">
           <div className="w-full md:w-3/4 md:mr-4">
             <div className="border border-gray-300 rounded p-4 mb-4">
-              <h2 className="text-2xl font-bold mb-4 bg-secondary text-white p-2">
+              <h2 className="text-2xl font-bold mb-4 bg-yellow-800 text-white p-2">
                 Box Calculation
               </h2>
               <div className="mb-4 flex flex-col">
@@ -100,27 +100,27 @@ const TileCalculator = () => {
               </div>
               <button
                 onClick={calculateTiles}
-                className="bg-secondary text-white px-4 py-2 rounded hover:bg-tertiary"
+                className="bg-yellow-800 text-white px-4 py-2 rounded hover:bg-secondary"
               >
                 Calculate
               </button>
             </div>
             <div className="border border-gray-300 rounded p-4">
-              <h2 className="text-2xl font-bold mb-4 bg-secondary text-white p-2">
+              <h2 className="text-2xl font-bold mb-4 bg-yellow-800 text-white p-2">
                 Calculations
               </h2>
               <div className="mb-4">
-                <p>Total Area Covered:</p>
-                <p>Square Meter: {result.totalAreaSqM || "-"}</p>
-                <p>Square Feet: {result.totalAreaSqFt || "-"}</p>
-                <p>Required Tiles: {result.requiredTiles || "-"}</p>
-                <p>Required Boxes: {result.requiredBoxes || "-"}</p>
+                <p style={{fontWeight:'600'}}>Total Area Covered</p>
+                <p> In  Sq. M : {result.totalAreaSqM || ""}</p>
+                <p> In  Sq. Ft : {result.totalAreaSqFt || ""}</p>
+                <p>Required Tiles : {result.requiredTiles || ""}</p>
+                <p>Required Boxes : {result.requiredBoxes || ""}</p>
               </div>
             </div>
           </div>
           <div className="w-full md:w-1/4 mt-4 md:mt-0">
             <div className="border border-gray-300 rounded p-4 mb-4">
-              <h2 className="text-2xl font-bold mb-4 bg-secondary text-white p-2">
+              <h2 className="text-2xl font-bold mb-4 bg-yellow-800 text-white p-2">
                 Tips
               </h2>
               <ul>
