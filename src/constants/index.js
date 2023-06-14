@@ -65,6 +65,7 @@ export const normalProducts = [
         boxPerContainer: "1012",
         sqmPerContainer: "1457.28",
         approxWeight: "28000",
+        tileType:""
     },
     {
         id: 2,
@@ -77,6 +78,7 @@ export const normalProducts = [
         boxPerContainer: "900",
         sqmPerContainer: "1296",
         approxWeight: "28000",
+        tileType:""
     },
     {
         id: 3,
@@ -89,6 +91,7 @@ export const normalProducts = [
         boxPerContainer: "900",
         sqmPerContainer: "1296",
         approxWeight: "28000",
+        tileType:""
     },
     {
         id: 4,
@@ -101,6 +104,7 @@ export const normalProducts = [
         boxPerContainer: "680",
         sqmPerContainer: "1350.6",
         approxWeight: "28000",
+        tileType:""
     },
 ];
 
@@ -116,6 +120,7 @@ export const euroProducts = [
         boxPerContainer: "864",
         sqmPerContainer: "1244.16",
         approxWeight: "24200",
+        tileType:""
     },
     {
         id: 2,
@@ -128,6 +133,7 @@ export const euroProducts = [
         boxPerContainer: "750",
         sqmPerContainer: "1080",
         approxWeight: "24000",
+        tileType:""
     },
     {
         id: 3,
@@ -140,6 +146,7 @@ export const euroProducts = [
         boxPerContainer: "750",
         sqmPerContainer: "1080",
         approxWeight: "24000",
+        tileType:""
     },
 ];
 
