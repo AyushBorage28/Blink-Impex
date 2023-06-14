@@ -1,6 +1,6 @@
 import React from "react";
 import backgroundImage from "../assets/about-bg.jpg";
-import mobileBackgroundImage from "../assets/about-bg-mobile.jpg";
+import mobileBackgroundImage from "../assets/about-bg.jpg";
 import BackgroundImage from "../components/BackgroundImage";
 
 const CompanyProfile = () => {
