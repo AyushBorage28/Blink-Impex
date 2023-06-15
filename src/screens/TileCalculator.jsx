@@ -113,6 +113,8 @@ const TileCalculator = () => {
                 <p> In Sq. Ft : {result.totalAreaSqFt || ""}</p>
                 <p>Required Tiles : {result.requiredTiles || ""}</p>
                 <p>Required Boxes : {result.requiredBoxes || ""}</p>
+                <br />
+                <p className="text-center " style={{fontSize:'12px'}}>This may vary on basis of your actual need.     This is only approx calculation.</p>
               </div>
             </div>
           </div>
