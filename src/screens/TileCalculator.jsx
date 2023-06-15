@@ -28,14 +28,12 @@ const TileCalculator = () => {
     const areaSqMeter = lengthMeter * widthMeter;
     const areaSqFeet = lengthFeet * widthFeet;
     const tilesPerBox = selectedProduct?.tilesPerBox || 0;
-    const boxesNeeded = Math.ceil(
-      (areaSqMeter * tilesPerBox) / selectedProduct.sqMtrPerBox
-    );
+    const boxesNeeded = Math.ceil(areaSqMeter / selectedProduct.sqMtrPerBox);
 
     setResult({
       totalAreaSqM: areaSqMeter.toFixed(2),
       totalAreaSqFt: areaSqFeet.toFixed(2),
-      requiredTiles: (areaSqMeter * tilesPerBox).toFixed(0),
+      requiredTiles: ((areaSqMeter * tilesPerBox) / selectedProduct.sqMtrPerBox).toFixed(0),
       requiredBoxes: boxesNeeded.toFixed(0),
     });
   };
@@ -49,7 +47,7 @@ const TileCalculator = () => {
         mobileBackgroundPosition="center top"
       ></BackgroundImage>
       <h1 className="sm:text-3xl text-center text-2xl pt-24 font-medium title-font mb-4 text-white">
-        TILE<span style={{ color: "#f2b400" }}> CALCULATOR</span>
+        TILE<span style={{ color: "#f2b400" }}> CALCU.toLATOR</span>
       </h1>
 
       <div className="container mx-auto px-5 md:px-0 mt-8 py-12">
@@ -110,9 +108,9 @@ const TileCalculator = () => {
                 Calculations
               </h2>
               <div className="mb-4">
-                <p style={{fontWeight:'600'}}>Total Area Covered</p>
-                <p> In  Sq. M : {result.totalAreaSqM || ""}</p>
-                <p> In  Sq. Ft : {result.totalAreaSqFt || ""}</p>
+                <p style={{ fontWeight: "600" }}>Total Area Covered</p>
+                <p> In Sq. M : {result.totalAreaSqM || ""}</p>
+                <p> In Sq. Ft : {result.totalAreaSqFt || ""}</p>
                 <p>Required Tiles : {result.requiredTiles || ""}</p>
                 <p>Required Boxes : {result.requiredBoxes || ""}</p>
               </div>
