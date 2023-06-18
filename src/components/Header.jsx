@@ -3,12 +3,13 @@ import { styles } from "../styles";
 import { Link } from "react-router-dom";
 import { navLinks } from "../constants";
 import { logo, menu, close } from "../assets";
+import i18next from "i18next";
 
 const Navbar = () => {
-  const [active, setActive] = useState("");
-  const [toggle, setToggle] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+  const [active, setActive] = useState(""); // State to track active dropdown menu
+  const [toggle, setToggle] = useState(false); // State to toggle mobile menu
+  const [scrolled, setScrolled] = useState(false); // State to track if page is scrolled
+  const [isMobile, setIsMobile] = useState(false); // State to track if the device is mobile
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,24 +26,50 @@ const Navbar = () => {
       setIsMobile(isMobileDevice);
     };
 
+    // Event listeners for scroll and resize
     window.addEventListener("scroll", handleScroll);
     window.addEventListener("resize", handleResize);
 
     handleResize(); // Call the resize handler initially
 
+    // Cleanup the event listeners on component unmount
     return () => {
       window.removeEventListener("resize", handleResize);
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
+  // Handle toggling of dropdown menus on click
   const handleDropdownToggle = (navId) => {
     setActive((prevActive) => (prevActive === navId ? "" : navId));
   };
 
+  // Close the active dropdown menu
   const handleDropdownClose = () => {
     setActive("");
     setToggle(false);
+  };
+
+  // Handle click on dropdown menu items
+  const handleDropdownItemClick = (navId, dropdownItemId) => {
+    if (navId === "language") {
+      i18next.changeLanguage(dropdownItemId);
+    } else {
+      setActive("");
+      setToggle(false);
+      handleDropdownClose();
+    }
+  };
+
+  // Handle click on mobile dropdown menu items
+  const handleMobileDropdownItemClick = (navId, dropdownItemId) => {
+    if (navId === "language") {
+      i18next.changeLanguage(dropdownItemId);
+    } else {
+      setActive("");
+      setToggle(false);
+      handleDropdownClose();
+    }
   };
 
   return (
@@ -93,7 +120,9 @@ const Navbar = () => {
                     handleDropdownToggle(nav.id);
                   }
                 }}
-                onMouseEnter={isMobile ? null : () => handleDropdownToggle(nav.id)}
+                onMouseEnter={
+                  isMobile ? null : () => handleDropdownToggle(nav.id)
+                }
                 onMouseLeave={isMobile ? null : handleDropdownClose}
               >
                 <span className="text-3 font-medium">{nav.title}</span>
@@ -103,8 +132,15 @@ const Navbar = () => {
                       <li
                         key={dropdownItem.id}
                         className={`px-4 py-2 hover:bg-yellow-800`}
+                        onClick={() =>
+                          handleDropdownItemClick(nav.id, dropdownItem.id)
+                        }
                       >
-                        <Link to={dropdownItem.id}>{dropdownItem.title}</Link>
+                        {nav.id === "language" ? (
+                          <span>{dropdownItem.title}</span>
+                        ) : (
+                          <Link to={dropdownItem.id}>{dropdownItem.title}</Link>
+                        )}
                       </li>
                     ))}
                   </ul>
@@ -217,19 +253,23 @@ const Navbar = () => {
                       {nav.dropdown.map((dropdownItem, index) => (
                         <li
                           key={dropdownItem.id}
-                          className={`cursor-pointer pt-[5px] text-[16px] ${index === nav.dropdown.length - 1 ? 'pb-2' : ''}`}
-                          onClick={() => {
-                            setActive("");
-                            setToggle(false);
-                            handleDropdownClose();
-                            if (isMobile) {
-                              <Link to={dropdownItem.id}>
-                                {dropdownItem.title}
-                              </Link>;
-                            }
-                          }}
+                          className={`cursor-pointer pt-[5px] text-[16px] ${
+                            index === nav.dropdown.length - 1 ? "pb-2" : ""
+                          }`}
+                          onClick={() =>
+                            handleMobileDropdownItemClick(
+                              nav.id,
+                              dropdownItem.id
+                            )
+                          }
                         >
-                          <Link to={dropdownItem.id}>{dropdownItem.title}</Link>
+                          {nav.id === "language" ? (
+                            <span>{dropdownItem.title}</span>
+                          ) : (
+                            <Link to={dropdownItem.id}>
+                              {dropdownItem.title}
+                            </Link>
+                          )}
                         </li>
                       ))}
                     </ul>
@@ -245,3 +285,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+

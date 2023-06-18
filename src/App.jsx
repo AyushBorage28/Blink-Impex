@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomeScreen from "./screens/HomeScreen.jsx";
 import Catalogue from "./screens/Catalogue.jsx";
@@ -31,20 +31,23 @@ const App = () => {
         <LogoLoader />
       ) : (
         <>
-          <Header />
-          <Routes>
-            <Route exact path="/" element={<HomeScreen />} />
-            <Route path="/infrastructure" element={<Infrastructure />} />
-            <Route path="/companyProfile" element={<CompanyProfile />} />
-            <Route path="/certificate" element={<ComingSoon/>} />
-            <Route path="/packingDetails" element={<PackingDetails />} />
-            <Route path="/tileCalculator" element={<TileCalculator />} />
-            <Route path="/catalogue" element={<Catalogue />} />
-            <Route path="/exports" element={<ComingSoon />} />
-            <Route path="/contactUs" element={<ContactScreen />} />
-            <Route path="*" element={<PageNotFound />} />
-          </Routes>
-          <Footer />
+          <Suspense fallback={null}>
+            <Header />
+         
+            <Routes>
+              <Route exact path="/" element={<HomeScreen />} />
+              <Route path="/infrastructure" element={<Infrastructure />} />
+              <Route path="/companyProfile" element={<CompanyProfile />} />
+              <Route path="/certificate" element={<ComingSoon />} />
+              <Route path="/packingDetails" element={<PackingDetails />} />
+              <Route path="/tileCalculator" element={<TileCalculator />} />
+              <Route path="/catalogue" element={<Catalogue />} />
+              <Route path="/exports" element={<ComingSoon />} />
+              <Route path="/contactUs" element={<ContactScreen />} />
+              <Route path="*" element={<PageNotFound />} />
+            </Routes>
+            <Footer />
+          </Suspense>
         </>
       )}
     </BrowserRouter>

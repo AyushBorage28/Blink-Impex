@@ -1,7 +1,9 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
 const Hero = () => {
+  const { t } = useTranslation();
   return (
     <section className="text-gray-400 body-font">
       <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
@@ -14,29 +16,21 @@ const Hero = () => {
         </div>
         <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
           <h3 className="title-font sm:text-2xl text-1xl mb-4 font-light">
-            Welcome to <span className="text-yellow-800">Blink Impex</span>
+            {t("main_content_white_title")}
+            <span className="text-yellow-800"> Blink Impex</span>
           </h3>
 
-          <h1
-            className="title-font sm:text-4xl text-3xl mb-4 font-bold text-white"
-           
-          >
-            Empowering
-            <br className="hidden lg:inline-block" /> progress through cutting
-            <br className="hidden lg:inline-block" /> edge technology solutions
+          <h1 className="title-font sm:text-4xl text-3xl mb-4 font-bold text-white">
+            {t("Empowering")}
+            <br className="hidden lg:inline-block" /> {t("progress through cutting")}
+            <br className="hidden lg:inline-block" /> {t("edge technology solutions")}
           </h1>
           <p className="mb-8 leading-relaxed">
             {" "}
-            Blink Impex is located in Morbi, Gujarat, India. We are specializing
-            in manufacturing a wide range of porcelain tiles, slabs and
-            sanitarywares.
+            Blink Impex {t("main_content_first_para")}
           </p>
           <p className="mb-8 leading-relaxed">
-            We at Blink Impex take immense pride in our dedicated team of
-            creative designers who are constantly in tune with the latest trends
-            of style and fashion. Their innovative ideas and keen eye for detail
-            enable us to offer a wide range of aesthetically pleasing products
-            that cater to diverse consumer preferences.
+          {t("We at")} Blink Impex {t("main_content_second_para")}
           </p>
 
           <div className="flex justify-center">
