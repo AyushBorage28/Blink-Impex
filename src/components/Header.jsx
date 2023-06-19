@@ -4,14 +4,32 @@ import { Link } from "react-router-dom";
 import { navLinks } from "../constants";
 import { logo, menu, close } from "../assets";
 import i18next from "i18next";
+import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
+  const { t } = useTranslation();
   const [active, setActive] = useState(""); // State to track active dropdown menu
   const [toggle, setToggle] = useState(false); // State to toggle mobile menu
   const [scrolled, setScrolled] = useState(false); // State to track if page is scrolled
   const [isMobile, setIsMobile] = useState(false); // State to track if the device is mobile
+  const [languageLoaded, setLanguageLoaded] = useState(false); // New state variable
 
   useEffect(() => {
+    const selectedLanguage = localStorage.getItem("selectedLanguage");
+
+    // Set the initial language title in navLinks based on the retrieved value
+    if (selectedLanguage) {
+      const languageNavLink = navLinks.find((nav) => nav.id === "language");
+      if (languageNavLink) {
+        const selectedLanguageItem = languageNavLink.dropdown.find(
+          (item) => item.id === selectedLanguage
+        );
+        if (selectedLanguageItem) {
+          languageNavLink.title = selectedLanguageItem.title;
+        }
+      }
+    }
+
     const handleScroll = () => {
       const scrollTop = window.scrollY;
       if (scrollTop > 200) {
@@ -53,6 +71,18 @@ const Navbar = () => {
   // Handle click on dropdown menu items
   const handleDropdownItemClick = (navId, dropdownItemId) => {
     if (navId === "language") {
+      // Update the title of the "language" NavLink
+      const selectedLanguage = navLinks.find((nav) => nav.id === navId);
+      const selectedLanguageItem = selectedLanguage.dropdown.find(
+        (item) => item.id === dropdownItemId
+      );
+      if (selectedLanguageItem) {
+        selectedLanguage.title = selectedLanguageItem.title;
+      }
+
+      // Store the selected language in local storage
+      localStorage.setItem("selectedLanguage", dropdownItemId);
+
       i18next.changeLanguage(dropdownItemId);
     } else {
       setActive("");
@@ -64,6 +94,17 @@ const Navbar = () => {
   // Handle click on mobile dropdown menu items
   const handleMobileDropdownItemClick = (navId, dropdownItemId) => {
     if (navId === "language") {
+      // Update the title of the mobile "language" NavLink
+      const selectedLanguage = navLinks.find((nav) => nav.id === navId);
+      const selectedLanguageItem = selectedLanguage.dropdown.find(
+        (item) => item.id === dropdownItemId
+      );
+      if (selectedLanguageItem) {
+        selectedLanguage.title = selectedLanguageItem.title;
+      }
+
+      localStorage.setItem("selectedLanguage", dropdownItemId);
+
       i18next.changeLanguage(dropdownItemId);
     } else {
       setActive("");
@@ -71,6 +112,13 @@ const Navbar = () => {
       handleDropdownClose();
     }
   };
+
+  useEffect(() => {
+    const selectedLanguage = localStorage.getItem("selectedLanguage");
+    if (selectedLanguage) {
+      setLanguageLoaded(true);
+    }
+  }, []);
 
   return (
     <nav
@@ -125,7 +173,7 @@ const Navbar = () => {
                 }
                 onMouseLeave={isMobile ? null : handleDropdownClose}
               >
-                <span className="text-3 font-medium">{nav.title}</span>
+                <span className="text-3 font-medium">{t(nav.title)}</span>
                 {!isMobile && active === nav.id && (
                   <ul className="absolute top-full left-0 w-48 py-2 bg-primary shadow-lg text-[14px] rounded-lg">
                     {nav.dropdown.map((dropdownItem) => (
@@ -137,9 +185,11 @@ const Navbar = () => {
                         }
                       >
                         {nav.id === "language" ? (
-                          <span>{dropdownItem.title}</span>
+                          <span>{t(dropdownItem.title)}</span>
                         ) : (
-                          <Link to={dropdownItem.id}>{dropdownItem.title}</Link>
+                          <Link to={dropdownItem.id}>
+                            {t(dropdownItem.title)}
+                          </Link>
                         )}
                       </li>
                     ))}
@@ -163,7 +213,7 @@ const Navbar = () => {
                     handleDropdownClose();
                   }}
                 >
-                  {nav.title}
+                  {t(nav.title)}
                 </Link>
               </li>
             )
@@ -209,7 +259,7 @@ const Navbar = () => {
                   <div className="flex items-center pb-0">
                     {nav.dropdown ? (
                       <>
-                        <span>{nav.title}</span>
+                        <span>{t(nav.title)}</span>
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           className={`${
@@ -238,7 +288,7 @@ const Navbar = () => {
                           handleDropdownClose();
                         }}
                       >
-                        {nav.title}
+                        {t(nav.title)}
                       </Link>
                     )}
                   </div>
@@ -264,10 +314,10 @@ const Navbar = () => {
                           }
                         >
                           {nav.id === "language" ? (
-                            <span>{dropdownItem.title}</span>
+                            <span>{t(dropdownItem.title)}</span>
                           ) : (
                             <Link to={dropdownItem.id}>
-                              {dropdownItem.title}
+                              {t(dropdownItem.title)}
                             </Link>
                           )}
                         </li>
@@ -285,4 +335,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-

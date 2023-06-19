@@ -71,9 +71,24 @@ export const navLinks = [
                 language: "sw"
             },
             {
+                id: "es",
+                title: "ES",
+                language: "es"
+            },
+            {
                 id: "tr",
                 title: "TR",
                 language: "tr"
+            },
+            {
+                id: "ara",
+                title: "AR",
+                language: "ara"
+            },
+            {
+                id: "y",
+                title: "Y",
+                language: "y"
             },
             
         ],

@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import collectionItems from "../constants";
 
 const Collection = () => {
+  const { t } = useTranslation();
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const handleMouseEnter = (index) => {
@@ -25,17 +27,14 @@ const Collection = () => {
   };
 
   return (
-    <section className="text-gray-400  body-font">
+    <section className="text-gray-400 body-font">
       <div className="container px-5 py-16 mx-auto">
         <div className="flex flex-col text-center w-full mb-20">
           <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">
-            OUR <span style={{ color: "#f2b400" }}>COLLECTIONS</span>
+            {t("OUR")} <span style={{ color: "#f2b400" }}>{t("COLLECTIONS")}</span>
           </h1>
           <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-            Discover our handcrafted collection of exquisite ceramics, blending
-            artistry with functionality. From modern designs to traditional
-            motifs, elevate your home decor and find unique treasures that speak
-            to your soul.
+            {t("collections_para")}
           </p>
         </div>
         <div className="flex flex-wrap m-3">
@@ -51,26 +50,26 @@ const Collection = () => {
                 style={{ width: "100%", height: "300px" }}
               >
                 <img
-                  alt={item.title}
+                  alt={t(item.title)} // Translate the alt text of the image
                   className="absolute inset-0 w-full h-full object-cover object-center"
                   src={item.imageSrc}
                 />
 
                 <div className="absolute inset-0 flex items-end justify-center">
-                  {renderAdditionalInfo(index, item.title)}
+                  {renderAdditionalInfo(index, t(item.title))} {/* Translate the additional info title */}
                 </div>
 
                 <div className="px-8 py-10 relative z-10 w-full border-2 border-yellow-800 bg-gray-900 opacity-0 hover:opacity-90">
                   <h2 className="tracking-widest text-sm title-font font-medium text-yellow-800 mb-1">
-                    {item.title}
+                    {t(item.title)} {/* Translate the item title */}
                   </h2>
                   <h1 className="title-font text-lg font-medium text-white mb-3">
-                    {item.description}
+                    {t(item.description)} {/* Translate the item description */}
                   </h1>
                   <ul className="leading-relaxed size-list">
                     {item.sizes.map((size, sizeIndex) => (
                       <li key={sizeIndex}>
-                        <a href="">{size}</a>
+                        <a href="">{t(size)}</a> {/* Translate the size */}
                       </li>
                     ))}
                   </ul>
