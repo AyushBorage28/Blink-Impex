@@ -1,6 +1,8 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const ComingSoon = () => {
+  const { t } = useTranslation();
   return (
     <div className="relative min-h-screen flex items-center justify-center bg-gray-900 overflow-hidden">
       <div className="grid-background absolute inset-0 p-2 grid grid-cols-12 gap-2 transform -skew-y-12 scale-150">
@@ -46,7 +48,7 @@ const ComingSoon = () => {
 
       <div className="relative">
         <h2 className="text-white text-4xl md:text-8xl font-bold flex flex-row items-center">
-          Coming
+        {t("Coming")}
           <div className="relative text-sm mx-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -60,11 +62,11 @@ const ComingSoon = () => {
             </svg>
             <div className="absolute -top-12 transform -rotate-45 text-yellow-800">
               <p className="font-light text-base text-white bg-yellow-800 rounded-md px-2 py-0">
-                super
+              {t("super")}
               </p>
             </div>
           </div>
-          Soon
+          {t("Soon")}
         </h2>
       </div>
     </div>

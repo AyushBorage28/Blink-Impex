@@ -8,6 +8,7 @@ import infra3 from "../assets/infra-3.jpg";
 import infra4 from "../assets/infra-4.jpg";
 import infra5 from "../assets/infra-5.jpg";
 import infra6 from "../assets/infra-6.jpg";
+import { useTranslation } from "react-i18next";
 
 const Infrastructure = () => {
   const imageStyles = {
@@ -25,9 +26,9 @@ const Infrastructure = () => {
     event.target.style.border = "none";
   };
 
-  
-
+  const { t } = useTranslation();
   return (
+    
     <>
       <BackgroundImage
         backgroundImage={backgroundImage}
@@ -39,15 +40,10 @@ const Infrastructure = () => {
         <div className="container px-5 py-24 mx-auto flex flex-wrap">
           <div className="flex flex-col text-center w-full mb-12">
             <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">
-              <span style={{ color: "#f2b400" }}>INFRASTRUCTURE</span>
+              <span style={{ color: "#f2b400" }}>{t("INFRASTRUCTURE")}</span>
             </h1>
             <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-              Blink Impex, based in Morbi, Gujarat, India, specializes in the
-              meticulous manufacturing of porcelain tiles, slabs, and sanitary
-              wares. Our team of talented designers incorporates the latest
-              style trends into their creations, while our dedicated technicians
-              deliver innovative, technology-driven products at unbelievable
-              prices.
+            {t("infra_first_para")}
             </p>
           </div>
 
@@ -124,18 +120,12 @@ const Infrastructure = () => {
         <div className="container px-5 pt-16 pb-16 mx-auto">
           <div className="flex w-full mb-20 flex-wrap">
             <h1 className="sm:text-3xl text-2xl text-white font-medium title-font text-white lg:w-1/3 lg:mb-0 mb-4">
-              SUPER MODERN
+            {t("SUPER MODERN")}
              
-              <span style={{ color: "#f2b400" }}> MANUFACTURING  <br className="hidden lg:inline-block" /> FACILTIES</span>
+              <span style={{ color: "#f2b400" }}> {t("MANUFACTURING")}  <br className="hidden lg:inline-block" /> {t("FACILITIES")}</span>
             </h1>
             <p className="lg:pl-6 lg:w-2/3 mx-auto leading-relaxed text-base">
-              We take pride in our world-className production facilities,
-              equipped with advanced machinery, and boasting India's largest
-              manufacturing plant for tiles. Our wide range of tile sizes
-              includes popular dimensions such as 600x600 mm, 600x1200 mm,
-              800x1600 mm, 1200x1200 mm, 1200x2400 mm, and 800x2400 mm. Quality
-              is our top priority, and our state-of-the-art setup ensures the
-              production of exceptional products.
+            {t("infra_second_para")}
             </p>
           </div>
         </div>
@@ -145,14 +135,9 @@ const Infrastructure = () => {
         <div className="container px-5 pt-16 pb-16 mx-auto">
           <div className="text-center mb-20">
             <h1 className="sm:text-3xl text-2xl font-medium text-center title-font text-white mb-4">
-              PRODUCTION SIZES{" "}
-              <span style={{ color: "#f2b400" }}> FOR ALL SIZES</span>
+            {t("INFRASTRUCTURE")}{" "}
+              <span style={{ color: "#f2b400" }}> {t("FOR ALL SIZES")}</span>
             </h1>
-            <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
-              Blue bottle crucifix vinyl post-ironic four dollar toast vegan
-              taxidermy. Gastropub indxgo juice poutine, ramps microdosing banh
-              mi pug.
-            </p>
           </div>
           <div className="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
             <div className="p-2 sm:w-1/2 w-full">
@@ -170,7 +155,7 @@ const Infrastructure = () => {
                   <path d="M22 4L12 14.01l-3-3"></path>
                 </svg>
                 <span className="title-font font-medium text-white">
-                  Capacity: 25000 sq. mtrs. Per day
+                {t("Capacity: 25000 sq. mtrs. Per day")}
                 </span>
               </div>
             </div>
@@ -189,7 +174,7 @@ const Infrastructure = () => {
                   <path d="M22 4L12 14.01l-3-3"></path>
                 </svg>
                 <span className="title-font font-medium text-white">
-                  Feeding System: Multicharged modular{" "}
+                {t("Feeding System: Multicharged modular")}{" "}
                 </span>
               </div>
             </div>
@@ -208,7 +193,7 @@ const Infrastructure = () => {
                   <path d="M22 4L12 14.01l-3-3"></path>
                 </svg>
                 <span className="title-font font-medium text-white">
-                  Kiln: 3 nos. of longest kilns of length 220 mtrs. from SACMI
+                {t("Kiln: 3 nos. of longest kilns of length 220 mtrs. from SACMI")}
                 </span>
               </div>
             </div>
@@ -227,7 +212,7 @@ const Infrastructure = () => {
                   <path d="M22 4L12 14.01l-3-3"></path>
                 </svg>
                 <span className="title-font font-medium text-white">
-                  Polishing Line: Biggest line with 48 heads from KEDA
+                {t("Polishing Line: Biggest line with 48 heads from KEDA")}
                 </span>
               </div>
             </div>
@@ -246,7 +231,7 @@ const Infrastructure = () => {
                   <path d="M22 4L12 14.01l-3-3"></path>
                 </svg>
                 <span className="title-font font-medium text-white">
-                  Press: PH 5000 tons - 4 nos. from SACMI
+                {t("Press: PH 5000 tons - 4 nos. from SACMI")}
                 </span>
               </div>
             </div>
@@ -265,7 +250,7 @@ const Infrastructure = () => {
                   <path d="M22 4L12 14.01l-3-3"></path>
                 </svg>
                 <span className="title-font font-medium text-white">
-                  Polishing machine with Nano facility
+                {t("Polishing machine with Nano facility")}
                 </span>
               </div>
             </div>
@@ -284,9 +269,7 @@ const Infrastructure = () => {
                   <path d="M22 4L12 14.01l-3-3"></path>
                 </svg>
                 <span className="title-font font-medium text-white">
-                  TGV (Track Guided Vehicle) Robotic equipment for automatic
-                  polishing machine with nano facility control of storage &
-                  movement of tiles
+                {t("TGV (Track Guided Vehicle) Robotic equipment for automatic polishing machine with nano facility control of storage & movement of tiles")}
                 </span>
               </div>
             </div>
@@ -298,10 +281,10 @@ const Infrastructure = () => {
         <div className="container px-5 pt-16 pb-24 mx-auto">
           <div className="text-center mb-20">
             <h1 className="sm:text-3xl text-2xl font-medium text-center title-font text-white mb-4">
-              <span style={{ color: "#f2b400" }}>CERTIFICATES</span>
+              <span style={{ color: "#f2b400" }}>{t("CERTIFICATES")}</span>
             </h1>
             <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto blinking-text">
-              Coming Soon...
+            {t("Coming Soon...")}
             </p>
           </div>
         </div>

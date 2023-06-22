@@ -47,7 +47,7 @@ const TileCalculator = () => {
         mobileBackgroundPosition="center top"
       ></BackgroundImage>
       <h1 className="sm:text-3xl text-center text-2xl pt-24 font-medium title-font mb-4 text-white">
-        TILE<span style={{ color: "#f2b400" }}> CALCU.toLATOR</span>
+        TILE<span style={{ color: "#f2b400" }}> CALCULATOR</span>
       </h1>
 
       <div className="container mx-auto px-5 md:px-0 mt-8 py-12">

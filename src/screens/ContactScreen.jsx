@@ -2,8 +2,10 @@ import React, { useEffect, useState } from "react";
 import backgroundImage from "../assets/contact-bg.jpg";
 import mobileBackgroundImage from "../assets/contact-bg-mobile.jpg";
 import BackgroundImage from "../components/BackgroundImage";
+import { useTranslation } from "react-i18next";
 
 const ContactScreen = () => {
+  const { t } = useTranslation();
   return (
     <>
       <BackgroundImage
@@ -22,10 +24,10 @@ const ContactScreen = () => {
               src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=22.8053852,70.8185317+(Blink%20Impex)&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
               style={{ filter: "grayscale(1), contrast(1.2) opacity(0.16)" }}
             ></iframe>
-            <div className="bg-gray-900 relative flex flex-wrap py-6 rounded shadow-md">
+            <div className="bg-gray-900 absolute flex flex-wrap py-6 rounded shadow-md items-center justify-center">
               <div className="lg:w-1/2 px-6">
                 <h2 className="title-font font-semibold text-white tracking-widest text-xs">
-                  ADDRESS
+                  {t("ADDRESS")}
                 </h2>
                 <p className="mt-1">
                   SHOP NO-10, Chitrakoot 4 GIDC B/H sanala road, Morbi 363641
@@ -33,7 +35,7 @@ const ContactScreen = () => {
               </div>
               <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
                 <h2 className="title-font font-semibold text-white tracking-widest text-xs">
-                  EMAIL
+                  {t("EMAIL")}
                 </h2>
                 <a className="text-yellow-800 leading-relaxed">
                   export@blinkimpex.com
@@ -41,7 +43,7 @@ const ContactScreen = () => {
                   blinkimpex@gmail.com
                 </a>
                 <h2 className="title-font font-semibold text-white tracking-widest text-xs mt-4">
-                  PHONE
+                  {t("PHONE")}
                 </h2>
                 <p className="leading-relaxed">+91 63539 43201</p>
                 <p className="leading-relaxed">+91 88495 57832</p>
@@ -50,14 +52,14 @@ const ContactScreen = () => {
           </div>
           <div className="lg:w-1/3 md:w-1/2 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
             <h2 className="text-white text-lg mb-1 font-medium title-font">
-              Reach out to us
+              {t("Reach out to us")}
             </h2>
             <p className="leading-relaxed mb-5">
-              Anything you want to ask? Jot it down below
+              {t("Anything you want to ask? Jot it down below")}
             </p>
             <div className="relative mb-4">
               <label htmlFor="name" className="leading-7 text-sm text-gray-400">
-                Name
+                {t("Name")}
               </label>
               <input
                 type="text"
@@ -71,7 +73,7 @@ const ContactScreen = () => {
                 htmlFor="email"
                 className="leading-7 text-sm text-gray-400"
               >
-                Email
+                {t("Email")}
               </label>
               <input
                 type="email"
@@ -85,7 +87,7 @@ const ContactScreen = () => {
                 htmlFor="message"
                 className="leading-7 text-sm text-gray-400"
               >
-                Message
+                {t("Message")}
               </label>
               <textarea
                 id="message"
@@ -94,12 +96,8 @@ const ContactScreen = () => {
               ></textarea>
             </div>
             <button className="text-white bg-yellow-800 border-0 py-2 px-6 focus:outline-none hover:bg-yellow-900 rounded text-lg">
-              Button
+              {t("Submit")}
             </button>
-            <p className="text-xs text-gray-400 text-opacity-90 mt-3">
-              Chicharrones blog helvetica normcore iceland tousled brook viral
-              artisan.
-            </p>
           </div>
         </div>
       </section>

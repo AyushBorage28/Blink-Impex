@@ -1,18 +1,17 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const Statistics = () => {
+  const { t } = useTranslation();
   return (
     <section className="text-gray-400 body-font">
       <div className="container px-5 py-16 mx-auto">
         <div className="flex flex-col text-center w-full mb-20">
           <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">
-            WHY <span className="text-yellow-800">CHOOSE US?</span>
+          {t("WHY")} <span className="text-yellow-800">{t("CHOOSE US?")}</span>
           </h1>
           <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-            Experience the finest craftsmanship and attention to detail that
-            sets us apart. With a commitment to quality, elegance, and
-            exceptional customer service, we are your ultimate destination for
-            exquisite ceramic treasures.
+            {t("statistics_para")}
           </p>
         </div>
         <div className="flex flex-wrap -m-4 text-center">
@@ -31,9 +30,9 @@ const Statistics = () => {
                 <path d="M20.88 18.09A5 5 0 0018 9h-1.26A8 8 0 103 16.29"></path>
               </svg>
               <h2 className="title-font font-medium text-3xl text-white">
-                200+
+              200+
               </h2>
-              <p className="leading-relaxed">Clients</p>
+              <p className="leading-relaxed"> {t("Clients")}</p>
             </div>
           </div>
           <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
@@ -54,7 +53,7 @@ const Statistics = () => {
               <h2 className="title-font font-medium text-3xl text-white">
                 24/7
               </h2>
-              <p className="leading-relaxed">Support</p>
+              <p className="leading-relaxed"> {t("Support")}</p>
             </div>
           </div>
           <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
@@ -74,7 +73,7 @@ const Statistics = () => {
               <h2 className="title-font font-medium text-3xl text-white">
                 300+
               </h2>
-              <p className="leading-relaxed">Designs</p>
+              <p className="leading-relaxed"> {t("Designs")}</p>
             </div>
           </div>
           <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
@@ -91,7 +90,7 @@ const Statistics = () => {
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
               </svg>
               <h2 className="title-font font-medium text-3xl text-white">7+</h2>
-              <p className="leading-relaxed">Surfaces</p>
+              <p className="leading-relaxed"> {t("Surfaces")}</p>
             </div>
           </div>
         </div>
