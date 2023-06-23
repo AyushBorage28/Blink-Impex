@@ -56,6 +56,7 @@
   "Email": "Correo electrónico",
   "Message": "Mensaje",
   "Submit": "Enviar",
+
   "STORY": "HISTORIA",
   "company_profile_second_para": " En Blink Impex contamos con un equipo de diseñadores creativos que trabajan con las últimas tendencias de estilo y los técnicos de nuestra empresa se dedican a entregar productos impulsados por la tecnología a precios que son difíciles de creer.",
   "innovation_para": "La innovación siempre ha sido la filosofía principal de Larson. Dibujando inspiración de la naturaleza impresionante a la fascinante Ambiente entregado en su verdadera forma y estilo.",
@@ -101,5 +102,22 @@
   "Weight Per Box (Approx)": "Peso por Caja (Aproximado)",
 
   "catalog_para": "Descubre un mundo de impresionantes azulejos de cerámica al alcance de tus dedos. Navega por nuestro catálogo descargable y desata una inspiración ilimitada para tu próximo proyecto de diseño. Experimenta la artesanía y la elegancia que transformarán tu espacio en una obra maestra.",
-  "DOWNLOAD": "DESCARGAR"
+  "DOWNLOAD": "DESCARGAR",
+
+  "infra_first_para": "Blink Impex, ubicada en Morbi, Gujarat, India, se especializa en la fabricación meticulosa de azulejos cerámicos, piedras y sanitarios. Nuestro equipo de talentosos diseñadores incorpora las últimas tendencias en su trabajo, mientras que nuestros dedicados artesanos ofrecen productos innovadores utilizando tecnología de vanguardia a precios inigualables.",
+  "infra_second_para": "Nos enorgullece nuestras instalaciones de producción de clase mundial, equipadas con equipos de última generación, y contamos con la planta de fabricación de azulejos más grande de la India. Nuestra gama de tamaños de azulejos incluye dimensiones populares como 600x600 mm, 600x1200 mm, 800x1600 mm, 1200x1200 mm, 1200x2400 mm y 800x2400 mm. La calidad es nuestra máxima prioridad, y nuestro diseño impulsado por tecnología avanzada garantiza la producción de productos superiores.",
+  "SUPER MODERN": "SUPER MODERNO",
+  "MANUFACTURING": "FABRICACIÓN",
+  "FACILITIES": "INSTALACIONES",
+  "PRODUCTION SIZES": "TAMAÑOS DE PRODUCCIÓN",
+  "FOR ALL SIZES": "PARA TODOS LOS TAMAÑOS",
+  "Capacity: 25000 sq. mtrs. Per day": "Capacidad: 25000 metros cuadrados por día",
+  "Feeding System: Multicharged modular": "Sistema de alimentación: Modular multicarga",
+  "Kiln: 3 nos. of longest kilns of length 220 mtrs. from SACMI": "Horno: 3 hornos más largos con una longitud de 220 metros de SACMI",
+  "Polishing Line: Biggest line with 48 heads from KEDA": "Línea de pulido: La línea más grande con 48 cabezales de KEDA",
+  "Press: PH 5000 tons - 4 nos. from SACMI": "Prensa: PH 5000 toneladas - 4 unidades de SACMI",
+  "Polishing machine with Nano facility": "Máquina de pulido con instalación Nano",
+  "TGV (Track Guided Vehicle) Robotic equipment for automatic polishing machine with nano facility control of storage & movement of tiles": "Equipo robótico TGV (Track Guided Vehicle) para máquina de pulido automática con instalación Nano para controlar el almacenamiento y movimiento de azulejos",
+  "CERTIFICATES": "CERTIFICADOS",
+  "Coming Soon...": "Próximamente..."
 }
