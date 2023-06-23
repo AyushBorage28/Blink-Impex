@@ -3,8 +3,10 @@ import backgroundImage from "../assets/packagingTiles-bg.jpg";
 import mobileBackgroundImage from "../assets/packagingTiles-bg.jpg";
 import BackgroundImage from "../components/BackgroundImage";
 import { euroProducts, normalProducts } from "../constants";
+import { useTranslation } from "react-i18next";
 
 const PackingDetails = () => {
+  const { t } = useTranslation();
   return (
     <>
       <BackgroundImage
@@ -13,19 +15,20 @@ const PackingDetails = () => {
       ></BackgroundImage>
 
       <h1 className="sm:text-3xl text-center pt-24 text-2xl font-medium title-font text-white ">
-        PACKAGING <span style={{ color: "#f2b400" }}>DETAILS</span>
+        {t("PACKAGING")}{" "}
+        <span style={{ color: "#f2b400" }}>{t("DETAILS")}</span>
       </h1>
 
       <div className="pb-12 normal-pallet-packaging">
         <h4 className="sm:text-2xl text-center pt-16 pb-0 text-xl font-medium title-font text-white mb-4">
           <span style={{ color: "#f2b400" }}>
             {" "}
-            NORMAL PALLET PACKAGING 20'FCL
+            {t("NORMAL PALLET PACKAGING 20'FCL")}
           </span>
         </h4>
 
         <h4 className="sm:text-l text-center pt-2 pb-4 text-xl font-medium title-font text-white mb-4">
-            GVT/PGVT (PORCELAIN GLAZED VITRIFIED TILES)
+          {t("GVT/PGVT (PORCELAIN GLAZED VITRIFIED TILES)")}
         </h4>
 
         <div className="max-w-6xl mx-auto ">
@@ -40,55 +43,55 @@ const PackingDetails = () => {
                           scope="col"
                           className="py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400"
                         >
-                          Size cm
+                          {t("Size cm")}
                         </th>
                         <th
                           scope="col"
                           className="py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400"
                         >
-                          Thickness
+                          {t("Thickness")}
                         </th>
                         <th
                           scope="col"
                           className="py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400"
                         >
-                          No. of Tiles Per Box
+                          {t("No. of Tiles Per Box")}
                         </th>
                         <th
                           scope="col"
                           className="py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400"
                         >
-                          Sq. Mtr.Per Box	
+                          {t("Sq. Mtr.Per Box")}
                         </th>
                         <th
                           scope="col"
                           className="py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400"
                         >
-                          Box Per Pallet
+                          {t("Box Per Pallet")}
                         </th>
                         <th
                           scope="col"
                           className="py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400"
                         >
-                          Pallet Per Container
+                          {t("Pallet Per Container")}
                         </th>
                         <th
                           scope="col"
                           className="py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400"
                         >
-                          Box Per Container
+                          {t("Box Per Container")}
                         </th>
                         <th
                           scope="col"
                           className="py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400"
                         >
-                          Sq.mtr.Per Container
+                          {t("Sq.mtr.Per Container")}
                         </th>
                         <th
                           scope="col"
                           className="py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400"
                         >
-                          Weight Per Box (Approx)
+                          {t("Weight Per Box (Approx)")}
                         </th>
                       </tr>
                     </thead>
@@ -109,7 +112,7 @@ const PackingDetails = () => {
                             {product.tilesPerBox}
                           </td>
                           <td className="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                            {product.sqMtrPerBox	}
+                            {product.sqMtrPerBox}
                           </td>
                           <td className="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
                             {product.boxPerPallet}
@@ -140,15 +143,15 @@ const PackingDetails = () => {
       {/* table number 2 */}
 
       <div className="pb-12 euro-pallet-packaging">
-      <h4 className="sm:text-2xl text-center pt-16 pb-0 text-xl font-medium title-font text-white mb-4">
+        <h4 className="sm:text-2xl text-center pt-16 pb-0 text-xl font-medium title-font text-white mb-4">
           <span style={{ color: "#f2b400" }}>
             {" "}
-            NORMAL PALLET PACKAGING 20'FCL
+            {t("EURO PALLET PACKAGING 20'FCL")}
           </span>
         </h4>
 
         <h4 className="sm:text-l text-center pt-2 pb-4 text-xl font-medium title-font text-white mb-4">
-            GVT/PGVT (PORCELAIN GLAZED VITRIFIED TILES)
+          {t("GVT/PGVT (PORCELAIN GLAZED VITRIFIED TILES)")}
         </h4>
 
         <div className="max-w-6xl mx-auto ">
@@ -158,60 +161,60 @@ const PackingDetails = () => {
                 <div className="overflow-hidden ">
                   <table className="min-w-full divide-y divide-gray-200 table-fixed dark:divide-gray-700">
                     <thead className="bg-gray-100 dark:bg-gray-700">
-                      <tr>
+                    <tr>
                         <th
                           scope="col"
                           className="py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400"
                         >
-                          size
+                          {t("Size cm")}
                         </th>
                         <th
                           scope="col"
                           className="py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400"
                         >
-                          Product Name
+                          {t("Thickness")}
                         </th>
                         <th
                           scope="col"
                           className="py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400"
                         >
-                          No. of Tiles Per Box
+                          {t("No. of Tiles Per Box")}
                         </th>
                         <th
                           scope="col"
                           className="py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400"
                         >
-                          Sq. Mtr.Per Box	
+                          {t("Sq. Mtr.Per Box")}
                         </th>
                         <th
                           scope="col"
                           className="py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400"
                         >
-                          Box Per Pallet
+                          {t("Box Per Pallet")}
                         </th>
                         <th
                           scope="col"
                           className="py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400"
                         >
-                          Pallet Per Container
+                          {t("Pallet Per Container")}
                         </th>
                         <th
                           scope="col"
                           className="py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400"
                         >
-                          Box Per Container
+                          {t("Box Per Container")}
                         </th>
                         <th
                           scope="col"
                           className="py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400"
                         >
-                          Sq.mtr.Per Container
+                          {t("Sq.mtr.Per Container")}
                         </th>
                         <th
                           scope="col"
                           className="py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400"
                         >
-                          Weight Per Box (Approx)
+                          {t("Weight Per Box (Approx)")}
                         </th>
                       </tr>
                     </thead>
@@ -232,7 +235,7 @@ const PackingDetails = () => {
                             {product.tilesPerBox}
                           </td>
                           <td className="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                            {product.sqMtrPerBox	}
+                            {product.sqMtrPerBox}
                           </td>
                           <td className="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
                             {product.boxPerPallet}

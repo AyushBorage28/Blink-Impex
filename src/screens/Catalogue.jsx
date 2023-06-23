@@ -3,8 +3,10 @@ import backgroundImage from "../assets/catalogue-bg.jpg";
 import mobileBackgroundImage from "../assets/catalogue-bg-mobile.jpg";
 import downloadIcon from "../assets/download-icon.jpg";
 import BackgroundImage from "../components/BackgroundImage";
+import { useTranslation } from "react-i18next";
 
 const Catalogue = () => {
+  const { t } = useTranslation();
   return (
     <>
       <BackgroundImage
@@ -17,13 +19,10 @@ const Catalogue = () => {
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-col text-center w-full mb-20">
             <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-yellow-800">
-              DOWNLOAD
+              {t("DOWNLOAD")}
             </h1>
             <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-              Discover a world of stunning ceramic tiles at your fingertips.
-              Browse our downloadable catalogue and unleash boundless
-              inspiration for your next design project. Experience the artistry
-              and elegance that will transform your space into a masterpiece.
+              {t("catalog_para")}
             </p>
           </div>
           <div className="flex flex-wrap -m-2">
