@@ -1,6 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import mainContentImage from "../assets/massive-slab.jpg";
 
 const Hero = () => {
   const { t } = useTranslation();
@@ -11,7 +12,7 @@ const Hero = () => {
           <img
             className="object-cover object-center rounded"
             alt="hero"
-            src=".\src\assets\main-content-image.jpg"
+            src={mainContentImage}
           />
         </div>
         <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
