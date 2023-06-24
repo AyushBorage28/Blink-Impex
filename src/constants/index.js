@@ -90,7 +90,7 @@ export const navLinks = [
                 title: "Y",
                 language: "y"
             },
-            
+
         ],
     },
 ];
@@ -221,6 +221,88 @@ const collectionItems = [
     },
 ];
 
+
+export const catalogue = [
+    {
+        category: "Artstone",
+        type: "Carving",
+        size: "60 X 120 MM",
+        link: "https://drive.google.com/file/d/1xh72JBcy2y3wXAXByxJK6E_qtkCq_Eq7/view?usp=drive_link",
+        type_image:typeImage
+    },
+
+    {
+        category: "Artstone Design",
+        type: "Carving",
+        size: "60 X 120 MM",
+        link: "https://drive.google.com/file/d/14anfJrvPztS4UmigQ8ud1Foe19krs1Lc/view?usp=drive_link",
+        type_image:typeImage
+    },
+
+    {
+        category: "Pigmento",
+        type: "Matt",
+        size: "60 X 120 MM",
+        link: "https://drive.google.com/file/d/1ioVouj7vpexOk_vljFLyUtJVn7UfxBBe/view?usp=drive_link",
+        type_image:typeImage
+    },
+    {
+        category: "Mudbox",
+        type: "Matt",
+        size: "60 X 120 MM",
+        link: "https://drive.google.com/file/d/16tnNcIipKWzNPiEyJyY7dGWDOlEmGYdF/view?usp=drive_link",
+        type_image:typeImage
+    },
+    {
+        category: "Glossy",
+        type: "Glossy",
+        size: "60 X 120 MM",
+        link: "https://drive.google.com/file/d/1eaV3VECUlJc9VovxJ1g3wWBARU9qIRSk/view?usp=drive_link",
+        type_image:typeImage
+    },
+    {
+        category: "Wanderlust",
+        type: "Glossy",
+        size: "60 X 120 MM",
+        link: "https://drive.google.com/file/d/1ifI403YIX6JzFOJBxcMBOlJ-SPKbjEtr/view?usp=drive_link",
+        type_image:typeImage
+    },
+    {
+        category: "Light-Dark",
+        type: "Glossy",
+        size: "60 X 120 MM",
+        link: "https://drive.google.com/file/d/1JuhshBo3lY-Yfk9e6XvPPvKLMcBFAztD/view?usp=drive_link",
+        type_image:typeImage
+    },
+    {
+        category: "Eternity Endless",
+        type: "Glossy",
+        size: "60 X 120 MM",
+        link: "https://drive.google.com/file/d/1p9S0gk38greAvZdD-gkcsxq4gtkaqV3j/view?usp=drive_link",
+        type_image:typeImage
+    },
+    {
+        category: "Wood Collection",
+        type: "Wood",
+        size: "60 X 120 MM",
+        link: "https://drive.google.com/file/d/1R2LxD_lAVbeww2pmgosXGmN9JouI4KpV/view?usp=drive_link",
+        type_image:typeImage
+    },
+    {
+        category: "Wood Collection",
+        type: "Wood",
+        size: "20 X 120 MM",
+        link: "https://drive.google.com/file/d/1BBYujiVbQxy0Wk1U23ZWAe6b1pHqIOW3/view?usp=drive_link",
+        type_image:typeImage
+    },
+    {
+        category: "Sanitary Ware",
+        type: "Sanitary",
+        size: "60 X 120 MM",
+        link: "https://drive.google.com/file/d/1HwSzugbIJ_yqMuaMZvjAVjLtAlLIllzA/view?usp=drive_link",
+        type_image:typeImage
+    }
+];
 
 
 export default collectionItems;
