@@ -1,5 +1,5 @@
 import React from "react";
-import worldMap from "../assets/world-map.png";
+import worldMap from "../assets/world-map.jpg";
 import { useTranslation } from "react-i18next";
 
 const ContactUs = () => {
@@ -50,7 +50,7 @@ const ContactUs = () => {
           </p>
           <div className="relative mb-4">
             <label htmlFor="name" className="leading-7 text-sm text-gray-400">
-            {t("Name")}
+              {t("Name")}
             </label>
             <input
               type="text"
@@ -61,7 +61,7 @@ const ContactUs = () => {
           </div>
           <div className="relative mb-4">
             <label htmlFor="email" className="leading-7 text-sm text-gray-400">
-            {t("Email")}
+              {t("Email")}
             </label>
             <input
               type="email"
@@ -84,7 +84,7 @@ const ContactUs = () => {
             ></textarea>
           </div>
           <button className="text-white bg-yellow-800 border-0 py-2 px-6 focus:outline-none hover:bg-yellow-900 rounded text-lg">
-          {t("Submit")}
+            {t("Submit")}
           </button>
         </div>
       </div>

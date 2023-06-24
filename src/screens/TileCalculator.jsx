@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import backgroundImage from "../assets/tileCalculator-bg.jpg";
 import mobileBackgroundImage from "../assets/tileCalculator-bg.jpg";
 import BackgroundImage from "../components/BackgroundImage";
-import tilesImage from "../assets/tile.png";
+import tilesImage from "../assets/tile.jpg";
 import { euroProducts, normalProducts } from "../constants";
 import { useTranslation } from "react-i18next";
 
