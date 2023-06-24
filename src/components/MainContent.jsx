@@ -1,7 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import mainContentImage from "../assets/massive-slab.jpg";
+import mainContentImage from "../assets/main-content-image.jpg";
 
 const Hero = () => {
   const { t } = useTranslation();
