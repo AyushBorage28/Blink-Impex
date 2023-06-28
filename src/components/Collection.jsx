@@ -67,9 +67,9 @@ const Collection = () => {
                     {t(item.description)} {/* Translate the item description */}
                   </h1>
                   <ul className="leading-relaxed size-list">
-                    {item.sizes.map((size, sizeIndex) => (
+                    {item.sizes.map((sizes, sizeIndex) => (
                       <li key={sizeIndex}>
-                        <a href="">{t(size)}</a> {/* Translate the size */}
+                        <a href="/catalogue">{t(sizes.name)}</a> {/* Translate the size */}
                       </li>
                     ))}
                   </ul>

@@ -199,26 +199,35 @@ const collectionItems = [
         title: "PORCELAIN TILES",
         imageSrc: porcelainTilesImage,
         description: "Elegant | Durable | Versatile",
-        sizes: ["600 X 600 MM", "800 X 800 MM", "600 X 1200 MM"],
+        sizes: [
+            { name: "600 X 600 MM", link: "/catalogue" },
+            { name: "800 X 800 MM", link: "example.com/size2" },
+            { name: "600 X 1200 MM", link: "example.com/size3" }
+        ]
     },
     {
         title: "MASSIVE SLAB",
         imageSrc: massiveSlabImage,
         description: "Bold | Seamless | Impressive",
         sizes: [
-            "800 X 1600 MM",
-            "1200 X 1200 MM",
-            "1200 X 2400 MM",
-            "800 X 2400 MM",
-            "800 X 3000 MM",
-        ],
+            { name: "800 X 1600 MM", link: "example.com/size4" },
+            { name: "1200 X 1200 MM", link: "example.com/size5" },
+            { name: "1200 X 2400 MM", link: "example.com/size6" },
+            { name: "800 X 2400 MM", link: "example.com/size7" },
+            { name: "800 X 3000 MM", link: "example.com/size8" }
+        ]
     },
     {
         title: "SANITARY WARE",
         imageSrc: sanitaryImage,
         description: "Pristine | Luxurious | Hygienic",
-        sizes: ["Wash Basin", "Water Closet", "Pan", "Accessories"],
-    },
+        sizes: [
+            { name: "Wash Basin", link: "example.com/size9" },
+            { name: "Water Closet", link: "example.com/size10" },
+            { name: "Pan", link: "example.com/size11" },
+            { name: "Accessories", link: "example.com/size12" }
+        ]
+    }
 ];
 
 
