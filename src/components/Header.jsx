@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { styles } from "../styles";
 import { Link } from "react-router-dom";
 import { navLinks } from "../constants";
-import { logo, menu, close } from "../assets";
+import { logo, menu, close, languageSvg } from "../assets";
 import i18next from "i18next";
 import { useTranslation } from "react-i18next";
 
@@ -173,7 +173,32 @@ const Navbar = () => {
                 }
                 onMouseLeave={isMobile ? null : handleDropdownClose}
               >
-                <span className="text-3 font-medium">{t(nav.title)}</span>
+                {nav.id === "language" ? (
+                  <div className="flex items-center gap-0">
+                    <img src={languageSvg} alt="language" className="w-8 h-8" />{" "}
+                    {/* Render the language SVG */}
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className={`${
+                        active === nav.id ? "rotate-180" : ""
+                      } h-4 w-4 ml-2 transition-transform duration-300 transform ${
+                        active === nav.id ? "text-yellow-800" : "text-white"
+                      }`}
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </div>
+                ) : (
+                  <span className="text-3 font-medium">{t(nav.title)}</span>
+                )}
                 {!isMobile && active === nav.id && (
                   <ul className="absolute top-full left-0 w-48 py-2 bg-primary shadow-lg text-[14px] rounded-lg">
                     {nav.dropdown.map((dropdownItem) => (
@@ -259,7 +284,21 @@ const Navbar = () => {
                   <div className="flex items-center pb-0">
                     {nav.dropdown ? (
                       <>
-                        <span>{t(nav.title)}</span>
+                        {nav.id === "language" ? (
+                          <div className="flex items-center gap-1">
+                            <img
+                              src={languageSvg}
+                              alt="language"
+                              className="w-8 h-8"
+                            />{" "}
+                            {/* Render the language SVG */}
+                            
+                          </div>
+                        ) : (
+                          <span className="text-3 font-medium">
+                            {t(nav.title)}
+                          </span>
+                        )}
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           className={`${
