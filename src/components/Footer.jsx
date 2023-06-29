@@ -24,11 +24,24 @@ const Footer = () => {
             </div>
             <div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
               <div className="space-y-3">
-                <h3 className="tracki uppercase text-yellow-800">
-                  Quicklinks
-                </h3>
+                <h3 className="tracki uppercase text-yellow-800">Quicklinks</h3>
                 <ul className="space-y-1 ">
-                  <li>
+                  <li className="flex items-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      className="w-4 h-4"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+
                     <a
                       rel="noopener noreferrer"
                       href="/"
@@ -37,7 +50,21 @@ const Footer = () => {
                       Home
                     </a>
                   </li>
-                  <li>
+                  <li className="flex items-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      className="w-4 h-4"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
                     <a
                       rel="noopener noreferrer"
                       href="/companyProfile"
@@ -46,7 +73,21 @@ const Footer = () => {
                       Company Profile
                     </a>
                   </li>
-                  <li>
+                  <li className="flex items-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      className="w-4 h-4"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
                     <a
                       rel="noopener noreferrer"
                       href="/infrastructure"
@@ -55,7 +96,21 @@ const Footer = () => {
                       Infrastructure
                     </a>
                   </li>
-                  <li>
+                  <li className="flex items-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      className="w-4 h-4"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
                     <a
                       rel="noopener noreferrer"
                       href="/catalogue"
@@ -64,7 +119,21 @@ const Footer = () => {
                       Catalogue
                     </a>
                   </li>
-                  <li>
+                  <li className="flex items-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      className="w-4 h-4"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
                     <a
                       rel="noopener noreferrer"
                       href="/packingDetails"
@@ -73,7 +142,21 @@ const Footer = () => {
                       Packing Details
                     </a>
                   </li>
-                  <li>
+                  <li className="flex items-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      className="w-4 h-4"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
                     <a
                       rel="noopener noreferrer"
                       href="/tileCalculator"
@@ -82,7 +165,21 @@ const Footer = () => {
                       Tile Calculator
                     </a>
                   </li>
-                  <li>
+                  <li className="flex items-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      className="w-4 h-4"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
                     <a
                       rel="noopener noreferrer"
                       href="/exports"
@@ -91,7 +188,21 @@ const Footer = () => {
                       Exports
                     </a>
                   </li>
-                  <li>
+                  <li className="flex items-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      className="w-4 h-4"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
                     <a
                       rel="noopener noreferrer"
                       href="/contactUs"
@@ -103,29 +214,49 @@ const Footer = () => {
                 </ul>
               </div>
               <div className="space-y-3">
-                <h3 className="tracki uppercase text-yellow-800">
-                  Contact Us
-                </h3>
+                <h3 className="tracki uppercase text-yellow-800">Contact Us</h3>
                 <ul className="space-y-1">
-                  <li>
+                  <li className="flex items-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      data-name="Layer 3"
+                      viewBox="0 0 24 24"
+                      className="w-5 h-5"
+                      id="location"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M12,2a8.009,8.009,0,0,0-8,8c0,3.255,2.363,5.958,4.866,8.819,0.792,0.906,1.612,1.843,2.342,2.791a1,1,0,0,0,1.584,0c0.73-.948,1.55-1.885,2.342-2.791C17.637,15.958,20,13.255,20,10A8.009,8.009,0,0,0,12,2Zm0,11a3,3,0,1,1,3-3A3,3,0,0,1,12,13Z"
+                      ></path>
+                    </svg>
                     <a
                       rel="noopener noreferrer"
                       href="#"
                       className="hover:text-yellow-800"
                     >
-                      Chitrakoot 4 GIDC B/H sanala road
+                      Chitrakoot 4 GIDC
                     </a>
                   </li>
                   <li>
                     <a
                       rel="noopener noreferrer"
                       href="#"
-                      className="hover:text-yellow-800"
+                      className="hover:text-yellow-800 pl-5"
+                    >
+                      B/H sanala road
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      rel="noopener noreferrer"
+                      href="#"
+                      className="hover:text-yellow-800 pl-5"
                     >
                       Morbi 363641
                     </a>
                   </li>
-                  <li>
+                  <li className="flex items-center">
+                    
                     <a
                       rel="noopener noreferrer"
                       href="#"
@@ -148,7 +279,20 @@ const Footer = () => {
               <div className="space-y-3">
                 <h3 className="uppercase text-yellow-800">Phone</h3>
                 <ul className="space-y-1">
-                  <li>
+                  <li className="flex items-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      className="w-5 h-5"
+                      id="phone"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M12.2 10c-1.1-.1-1.7 1.4-2.5 1.8C8.4 12.5 6 10 6 10S3.5 7.6 4.1 6.3c.5-.8 2-1.4 1.9-2.5-.1-1-2.3-4.6-3.4-3.6C.2 2.4 0 3.3 0 5.1c-.1 3.1 3.9 7 3.9 7 .4.4 3.9 4 7 3.9 1.8 0 2.7-.2 4.9-2.6 1-1.1-2.5-3.3-3.6-3.4z"
+                      ></path>
+                    </svg>
                     <a
                       rel="noopener noreferrer"
                       href="#"
@@ -157,7 +301,20 @@ const Footer = () => {
                       +91 63539 43201
                     </a>
                   </li>
-                  <li>
+                  <li className="flex items-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      className="w-5 h-5"
+                      id="phone"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M12.2 10c-1.1-.1-1.7 1.4-2.5 1.8C8.4 12.5 6 10 6 10S3.5 7.6 4.1 6.3c.5-.8 2-1.4 1.9-2.5-.1-1-2.3-4.6-3.4-3.6C.2 2.4 0 3.3 0 5.1c-.1 3.1 3.9 7 3.9 7 .4.4 3.9 4 7 3.9 1.8 0 2.7-.2 4.9-2.6 1-1.1-2.5-3.3-3.6-3.4z"
+                      ></path>
+                    </svg>
                     <a
                       rel="noopener noreferrer"
                       href="#"
