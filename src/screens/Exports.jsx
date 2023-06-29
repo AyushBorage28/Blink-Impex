@@ -1,10 +1,11 @@
 import React from "react";
-import backgroundImage from "../assets/catalogue-bg.jpg";
-import mobileBackgroundImage from "../assets/catalogue-bg-mobile.jpg";
+import backgroundImage from "../assets/exports-bg.jpg";
+import mobileBackgroundImage from "../assets/exports-bg.jpg";
 import BackgroundImage from "../components/BackgroundImage";
 import leadingExporter from "../assets/leading-exporter.jpg";
 import { useTranslation } from "react-i18next";
 import Flags from "../components/Flags";
+import Map from "../components/Map";
 
 const Exports = () => {
   const { t } = useTranslation();
@@ -15,16 +16,14 @@ const Exports = () => {
         backgroundImage={backgroundImage}
         mobileBackgroundImage={mobileBackgroundImage}
         backgroundPosition="center center"
-        mobileBackgroundPosition="center top"
+        mobileBackgroundPosition="center center"
       ></BackgroundImage>
       <section class="text-gray-400 body-font">
         <div class="container px-5 py-24 mx-auto flex flex-wrap">
           <div class="flex flex-col text-center w-full mb-20">
-            <h2 class="text-xs text-yellow-800 tracking-widest font-medium title-font mb-1">
-              ROOF PARTY POLAROID
-            </h2>
-            <h1 class="sm:text-3xl text-2xl font-medium title-font text-white">
-              Master Cleanse Reliac Heirloom
+            <h1 className="sm:text-3xl text-center text-2xl font-medium title-font text-white ">
+              {t("OUR")}{" "}
+              <span style={{ color: "#f2b400" }}>{t("COMMITMENTS")}</span>
             </h1>
           </div>
           <div class="flex flex-wrap -m-4">
@@ -171,8 +170,7 @@ const Exports = () => {
             <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-white uppercase">
               We are{" "}
               <span style={{ color: "#f2b400" }}>
-                leading
-                <br class="hidden lg:inline-block" />
+                leading <br class="hidden lg:inline-block" />
                 exporter{" "}
               </span>{" "}
               of ceramic tiles
@@ -198,7 +196,16 @@ const Exports = () => {
         </div>
       </section>
 
-      <section className="text-gray-400 body-font">
+      <Map />
+      <Flags />
+    </>
+  );
+};
+
+export default Exports;
+
+{
+  /* <section className="text-gray-400 body-font">
         <div className="container px-5 py-16 mx-auto">
           <div className="flex flex-col text-center w-full mb-20">
             <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">
@@ -292,11 +299,5 @@ const Exports = () => {
             </div>
           </div>
         </div>
-      </section>
-
-      <Flags />
-    </>
-  );
-};
-
-export default Exports;
+      </section> */
+}

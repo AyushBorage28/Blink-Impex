@@ -256,7 +256,6 @@ const Footer = () => {
                     </a>
                   </li>
                   <li className="flex items-center">
-                    
                     <a
                       rel="noopener noreferrer"
                       href="#"
