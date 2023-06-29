@@ -1,6 +1,30 @@
 import porcelainTilesImage from "../assets/porcelain-tiles.jpg";
 import massiveSlabImage from "../assets/massive-slab.jpg";
 import sanitaryImage from "../assets/Sanitaryware.jpg";
+import africa from "../assets/Africa.png";
+import albania from "../assets/Albania.png";
+import algeria from "../assets/Algeria.png";
+import australia from "../assets/Australia.png";
+import bahrain from "../assets/Bahrain.png";
+import belgium from "../assets/Belgium.png";
+import guatemala from "../assets/Guatemala.png";
+import iraq from "../assets/Iraq.png";
+import ireland from "../assets/Ireland.png";
+import israel from "../assets/Israel.png";
+import kuwait from "../assets/Kuwait.png";
+import lebanon from "../assets/Lebanon.png";
+import libya from "../assets/Libya.png";
+import malta from "../assets/Malta.png";
+import mauritania from "../assets/Mauritania.png";
+import palestine from "../assets/Palestine.png";
+import peru from "../assets/Peru.png";
+import poland from "../assets/Poland.png";
+import romania from "../assets/Romania.png";
+import spain from "../assets/Spain.png";
+import switzerland from "../assets/Switzerland.png";
+import tunisia from "../assets/Tunisia.png";
+import usa from "../assets/USA.png";
+import yemen from "../assets/Yemen.png";
 
 export const navLinks = [
     {
@@ -311,6 +335,34 @@ export const catalogue = [
         link: "https://drive.google.com/file/d/1HwSzugbIJ_yqMuaMZvjAVjLtAlLIllzA/view?usp=drive_link",
 
     }
+];
+
+
+export const flagsData = [
+    { name: "Africa", image: africa },
+    { name: "Alabania", image: albania },
+    { name: "Algeria", image: algeria },
+    { name: "Australia", image: australia },
+    { name: "Bahrain", image: bahrain },
+    { name: "Belgium", image: belgium },
+    { name: "Guatemala", image: guatemala },
+    { name: "Iraq", image: iraq },
+    { name: "Ireland", image: ireland },
+    { name: "Israel", image: israel },
+    { name: "Kuwait", image: kuwait },
+    { name: "Lebanon", image: lebanon },
+    { name: "Libya", image: libya },
+    { name: "Malta", image: malta },
+    { name: "Mauritania", image: mauritania },
+    { name: "Palestine", image: palestine },
+    { name: "Peru", image: peru },
+    { name: "Poland", image: poland },
+    { name: "Romania", image: romania },
+    { name: "Spain", image: spain },
+    { name: "Switzerland", image: switzerland },
+    { name: "Tunisia", image: tunisia },
+    { name: "USA", image: usa },
+    { name: "Yemen", image: yemen },
 ];
 
 

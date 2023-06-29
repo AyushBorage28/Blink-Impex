@@ -94,3 +94,19 @@ footer {
 .logo-image {
   width: 6rem; /* Adjust the value as needed */
 }
+
+.flag-image {
+  transition: transform 0.3s ease;
+}
+
+.flag-image:hover {
+  transform: scale(1.1);
+}
+
+.flag-text {
+  transition: color 0.3s ease;
+}
+
+.flag-text:hover {
+  color: #f2b400;
+}
