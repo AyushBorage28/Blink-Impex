@@ -30,7 +30,7 @@ const Catalogue = () => {
         backgroundPosition="center center"
         mobileBackgroundPosition="center top"
       ></BackgroundImage>
-      <section className="text-gray-400 bg-gray-900 body-font">
+      <section className="text-gray-400 body-font">
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-col text-center w-full mb-20">
             <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-yellow-800">

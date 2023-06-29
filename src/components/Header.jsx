@@ -125,7 +125,7 @@ const Navbar = () => {
       className={`${
         styles.paddingX
       } w-full flex items-center py-0 fixed top-0 z-50 ${
-        scrolled || isMobile ? "bg-primary I shadow-md" : "bg-transparent"
+        scrolled || isMobile ? "bg-gray-900 I shadow-md" : "bg-transparent"
       }`}
       style={{
         boxShadow:

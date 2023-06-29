@@ -90,3 +90,7 @@ footer {
 .blinking-text {
   animation: blinking 2s infinite;
 }
+
+.logo-image {
+  width: 6rem; /* Adjust the value as needed */
+}
