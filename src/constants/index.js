@@ -21,7 +21,7 @@ import peru from "../assets/Peru.png";
 import poland from "../assets/Poland.png";
 import romania from "../assets/Romania.png";
 import spain from "../assets/Spain.png";
-import switzerland from "../assets/Switzerland.png";
+import switzerland from "../assets/switzerland.png";
 import tunisia from "../assets/Tunisia.png";
 import usa from "../assets/USA.png";
 import yemen from "../assets/Yemen.png";
