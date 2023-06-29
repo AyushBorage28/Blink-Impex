@@ -43,7 +43,7 @@ const App = () => {
               <Route path="/packingDetails" element={<PackingDetails />} />
               <Route path="/tileCalculator" element={<TileCalculator />} />
               <Route path="/catalogue" element={<Catalogue />} />
-              <Route path="/exports" element={<Exports />} />
+              <Route path="/exports" element={<Exports/>} />
               <Route path="/contactUs" element={<ContactScreen />} />
               <Route path="*" element={<PageNotFound />} />
             </Routes>
