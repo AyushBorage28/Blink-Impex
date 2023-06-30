@@ -12,11 +12,11 @@ const Footer = () => {
                 href="#"
                 className="flex justify-center space-x-3 lg:justify-start"
               >
-                <div className="flex items-center justify-center w-13 h-12 rounded-full">
+                <div className="flex items-center justify-center sm:w-13 sm:h-12 md:w-13 md:h-12 lg:w-auto lg:h-auto  rounded-full">
                   <img
                     src={logo}
                     alt="logo"
-                    className="logo-image sm:w-13 sm:h-13 md:w-13 md:h-13 lg:w-36 lg:h-36"
+                    className="logo-image sm:w-13 sm:h-13 md:w-13 md:h-13 lg:w-48 lg:h-48"
                     style={{ padding: "0", margin: "0", lineHeight: "0"  }}
                   />
                 </div>
