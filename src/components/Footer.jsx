@@ -16,8 +16,8 @@ const Footer = () => {
                   <img
                     src={logo}
                     alt="logo"
-                    className="logo-image"
-                    style={{ padding: "0", margin: "0", lineHeight: "0" }}
+                    className="logo-image sm:w-13 sm:h-13 md:w-13 md:h-13 lg:w-36 lg:h-36"
+                    style={{ padding: "0", margin: "0", lineHeight: "0"  }}
                   />
                 </div>
               </a>
@@ -216,69 +216,7 @@ const Footer = () => {
               <div className="space-y-3">
                 <h3 className="tracki uppercase text-yellow-800">Contact Us</h3>
                 <ul className="space-y-1">
-                  <li className="flex items-center">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      data-name="Layer 3"
-                      viewBox="0 0 24 24"
-                      className="w-5 h-5"
-                      id="location"
-                    >
-                      <path
-                        fill="currentColor"
-                        d="M12,2a8.009,8.009,0,0,0-8,8c0,3.255,2.363,5.958,4.866,8.819,0.792,0.906,1.612,1.843,2.342,2.791a1,1,0,0,0,1.584,0c0.73-.948,1.55-1.885,2.342-2.791C17.637,15.958,20,13.255,20,10A8.009,8.009,0,0,0,12,2Zm0,11a3,3,0,1,1,3-3A3,3,0,0,1,12,13Z"
-                      ></path>
-                    </svg>
-                    <a
-                      rel="noopener noreferrer"
-                      href="#"
-                      className="hover:text-yellow-800"
-                    >
-                      Chitrakoot 4 GIDC
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      rel="noopener noreferrer"
-                      href="#"
-                      className="hover:text-yellow-800 pl-5"
-                    >
-                      B/H sanala road
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      rel="noopener noreferrer"
-                      href="#"
-                      className="hover:text-yellow-800 pl-5"
-                    >
-                      Morbi 363641
-                    </a>
-                  </li>
-                  <li className="flex items-center">
-                    <a
-                      rel="noopener noreferrer"
-                      href="#"
-                      className="hover:text-yellow-800"
-                    >
-                      export@blinkimpex.com
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      rel="noopener noreferrer"
-                      href="#"
-                      className="hover:text-yellow-800"
-                    >
-                      blinkimpex@gmail.com
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div className="space-y-3">
-                <h3 className="uppercase text-yellow-800">Phone</h3>
-                <ul className="space-y-1">
-                  <li className="flex items-center">
+                <li className="flex items-center">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="16"
@@ -320,6 +258,70 @@ const Footer = () => {
                       className="hover:text-yellow-800"
                     >
                       +91 88495 57832
+                    </a>
+                  </li>
+
+                  
+                  <li className="flex items-center">
+                    <a
+                      rel="noopener noreferrer"
+                      href="#"
+                      className="hover:text-yellow-800"
+                    >
+                      export@blinkimpex.com
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      rel="noopener noreferrer"
+                      href="#"
+                      className="hover:text-yellow-800"
+                    >
+                      blinkimpex@gmail.com
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div className="space-y-3">
+                <h3 className="uppercase text-yellow-800">Address</h3>
+                <ul className="space-y-1">
+                <li className="flex items-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      data-name="Layer 3"
+                      viewBox="0 0 24 24"
+                      className="w-5 h-5"
+                      id="location"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M12,2a8.009,8.009,0,0,0-8,8c0,3.255,2.363,5.958,4.866,8.819,0.792,0.906,1.612,1.843,2.342,2.791a1,1,0,0,0,1.584,0c0.73-.948,1.55-1.885,2.342-2.791C17.637,15.958,20,13.255,20,10A8.009,8.009,0,0,0,12,2Zm0,11a3,3,0,1,1,3-3A3,3,0,0,1,12,13Z"
+                      ></path>
+                    </svg>
+                    <a
+                      rel="noopener noreferrer"
+                      href="#"
+                      className="hover:text-yellow-800"
+                    >
+                      Chitrakoot 4 GIDC
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      rel="noopener noreferrer"
+                      href="#"
+                      className="hover:text-yellow-800 pl-5"
+                    >
+                      B/H sanala road
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      rel="noopener noreferrer"
+                      href="#"
+                      className="hover:text-yellow-800 pl-5"
+                    >
+                      Morbi 363641
                     </a>
                   </li>
                 </ul>

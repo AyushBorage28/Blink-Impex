@@ -37,7 +37,7 @@ const Collection = () => {
             {t("collections_para")}
           </p>
         </div>
-        <div className="flex flex-wrap m-3">
+        <div className="flex flex-wrap m-3 justify-center">
           {collectionItems.map((item, index) => (
             <div
               className="lg:w-1/3 sm:w-1/2 p-4"

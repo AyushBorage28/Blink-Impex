@@ -81,37 +81,37 @@ export const navLinks = [
         dropdown: [
             {
                 id: "en",
-                title: "EN",
+                title: "English",
                 language: 'en'
             },
             {
                 id: "af",
-                title: "AF",
+                title: "Afrikaans",
                 language: "af"
             },
             {
                 id: "sw",
-                title: "SW",
+                title: "Swahili",
                 language: "sw"
             },
             {
                 id: "es",
-                title: "ES",
+                title: "Spanish",
                 language: "es"
             },
             {
                 id: "tr",
-                title: "TR",
+                title: "Turkish",
                 language: "tr"
             },
             {
                 id: "ara",
-                title: "AR",
+                title: "Arabic",
                 language: "ara"
             },
             {
                 id: "y",
-                title: "Y",
+                title: "Yiddish",
                 language: "y"
             },
 
