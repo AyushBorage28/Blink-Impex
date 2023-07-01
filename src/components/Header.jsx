@@ -292,7 +292,6 @@ const Navbar = () => {
                               className="w-8 h-8"
                             />{" "}
                             {/* Render the language SVG */}
-                            
                           </div>
                         ) : (
                           <span className="text-3 font-medium">
