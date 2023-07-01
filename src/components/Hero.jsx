@@ -5,7 +5,7 @@ import { Carousel } from "react-responsive-carousel";
 
 const Hero = () => {
   return (
-    <Carousel infiniteLoop autoPlay interval={3000} stopOnHover={false} transitionTime={2000}>
+    <Carousel infiniteLoop autoPlay interval={3000} stopOnHover={false} transitionTime={2000} showArrows={false} showIndicators={false} >
       <div>
         <img src={carouselimage1} />
       </div>
