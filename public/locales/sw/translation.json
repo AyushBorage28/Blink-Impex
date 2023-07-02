@@ -67,7 +67,7 @@
   "mission_para": "Kuwezesha Mafanikio Kupitia Miundo Yenye Faida Kuwezesha Washirika na Kuongoza Soko kwa Utaalam wa Kiufundi kwa Mustakabali Endelevu wa Wafanyakazi Wetu Wenye Vipaji.",
   "Value": "Thamani",
   "value_para": "Uhalisi wa Kitendo: Kudumisha Ubora na Ubora Usio na Kifani ili Kuwasilisha Ubora Usio na Kifani, Kuhakikisha Thamani Isiyopimika ya Pesa kwa Wateja Wetu Wanaothaminiwa.",
-  
+
   "infra_first_para": "Blink Impex, iliyoko Morbi, Gujarat, India, inajishughulisha na utengenezaji makini wa vigae vya fayansi, mawe, na vyoo. Timu yetu ya wabunifu wenye vipaji huingiza mitindo ya hivi karibuni katika kazi zao, wakati mafundi wetu waliojitolea hutoa bidhaa za ubunifu zinazotumia teknolojia kwa bei isiyowezekana.",
   "infra_second_para": "Tunajivunia vituo vyetu vya uzalishaji vya darasa la dunia, vilivyosheheni vifaa vya kisasa, na kuwa na kiwanda kikubwa zaidi cha kutengeneza vigae nchini India. Upana wa saizi za vigae yetu unajumuisha vipimo maarufu kama vile 600x600 mm, 600x1200 mm, 800x1600 mm, 1200x1200 mm, 1200x2400 mm, na 800x2400 mm. Ubora ni kipaumbele chetu cha juu, na muundo wetu wenye teknolojia ya hali ya juu unahakikisha uzalishaji wa bidhaa bora.",
   "SUPER MODERN": "SUPER MODERNO",
@@ -121,5 +121,19 @@
   "Weight Per Box (Approx)": "Uzito kwa Kisanduku (Takriban)",
 
   "catalog_para": "Gundua ulimwengu wa vigae vya kauri vya kuvutia katika vidole vyako. Tafuta katalogi yetu ya kupakuliwa na kufungua vyanzo vya ubunifu visivyo na kikomo kwa mradi wako ujao wa kubuni. Pata uzoefu wa sanaa na ufasaha ambao utabadilisha nafasi yako kuwa kazi ya kipekee.",
-  "DOWNLOAD": "PATA"
+  "DOWNLOAD": "PATA",
+
+  "COMMITMENTS": "Ahadi",
+  "Quality Control": "Udhibiti wa Ubora",
+  "quality_control_para": "Tunajivunia kukubali changamoto inayoendelea na endelevu ya kutoa ubora usio na kifani katika bidhaa au huduma zetu.",
+  "Learn More": "Jifunze Zaidi",
+  "Eco-Friendly": "Rafiki wa Mazingira",
+  "eco_friendly_para": "Tumejitolea kuhakikisha kuwa mazoea yetu ya kushughulikia na kufunga yanafuata mzunguko rafiki wa mazingira ambao tumeweka.",
+  "24/7 Customer Support": "Msaada kwa Wateja 24/7",
+  "customer_support_para": "Tupo hapa kukusaidia na tunathamini sana msaada thabiti tunayopokea kutoka kwa watu wanaoshiriki ahadi yetu kwa maadili yetu ya msingi.",
+  "export_main_para": "Blink Impex ni kampuni ya kimataifa ambayo kamwe haijakataa mteja yeyote muhimu na inajitahidi kutoa utoaji salama na rahisi kwa uzoefu wa kuridhisha. Tukiwa na uwepo imara katika nchi kadhaa, Blink Impex ina shirika maalum la uhusiano na msaada wa kimataifa kwa wateja kutoka nchi za kigeni. Aidha, tuna wauzaji na wauzaji walio katika maeneo mbalimbali kutoa msaada wa kimwili unapohitajika.",
+  "We are": "Sisi ni",
+  "leading": "wanaoongoza",
+  "exporter": "wauzaji nje",
+  "of ceramic tiles": "wa vigae vya kauri"
 }

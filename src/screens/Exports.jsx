@@ -7,7 +7,6 @@ import { useTranslation } from "react-i18next";
 import Flags from "../components/Flags";
 import Map from "../components/Map";
 
-
 const Exports = () => {
   const { t } = useTranslation();
 
@@ -48,17 +47,15 @@ const Exports = () => {
                     </svg>
                   </div>
                   <h2 class="text-white text-lg title-font font-medium">
-                    Quality Control
+                    {t("Quality Control")}
                   </h2>
                 </div>
                 <div class="flex-grow">
                   <p class="leading-relaxed text-base">
-                    We take immense pride in embracing the ongoing and enduring
-                    challenge of consistently delivering unparalleled quality
-                    across our products or services.
+                    {t("quality_control_para")}
                   </p>
                   <a class="mt-3 text-yellow-800 inline-flex items-center">
-                    Learn More
+                    {t("Learn More")}
                     <svg
                       fill="none"
                       stroke="currentColor"
@@ -92,17 +89,15 @@ const Exports = () => {
                     </svg>
                   </div>
                   <h2 class="text-white text-lg title-font font-medium">
-                    Eco-Friendly
+                    {t("Eco-Friendly")}
                   </h2>
                 </div>
                 <div class="flex-grow">
                   <p class="leading-relaxed text-base">
-                    We are committed to ensuring that our handling and packaging
-                    practices align with environmentally friendly cycle we have
-                    established.
+                    {t("eco_friendly_para")}
                   </p>
                   <a class="mt-3 text-yellow-800 inline-flex items-center">
-                    Learn More
+                    {t("Learn More")}
                     <svg
                       fill="none"
                       stroke="currentColor"
@@ -135,17 +130,15 @@ const Exports = () => {
                     </svg>
                   </div>
                   <h2 class="text-white text-lg title-font font-medium">
-                    24/7 Customer Support
+                    {t("24/7 Customer Support")}
                   </h2>
                 </div>
                 <div class="flex-grow">
                   <p class="leading-relaxed text-base">
-                    We're here to assist and sincerely appreciate the unwavering
-                    support we receive from individuals who share our commitment
-                    to our core values.
+                    {t("customer_support_para")}
                   </p>
                   <a class="mt-3 text-yellow-800 inline-flex items-center">
-                    Learn More
+                    {t("Learn More")}
                     <svg
                       fill="none"
                       stroke="currentColor"
@@ -169,22 +162,14 @@ const Exports = () => {
         <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
           <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
             <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-white uppercase">
-              We are{" "}
+              {t("We are")}{" "}
               <span style={{ color: "#f2b400" }}>
-                leading <br class="hidden lg:inline-block" />
-                exporter{" "}
+                {t("leading")} <br class="hidden lg:inline-block" />
+                {t("exporter")}{" "}
               </span>{" "}
-              of ceramic tiles
+              {t("of ceramic tiles")}
             </h1>
-            <p class="mb-8 leading-relaxed">
-              Blink Impex is a global company that has never turned down any
-              valuable client and strives to provide safe and convenient
-              deliveries for a satisfying experience. With a strong presence in
-              multiple countries, Blink Impex has a dedicated agency for
-              international relations and support for clients from foreign
-              states. Additionally, they have distributors and dealers located
-              in various locations to offer physical assistance when needed.
-            </p>
+            <p class="mb-8 leading-relaxed">{t("export_main_para")}</p>
             <div class="flex justify-center"></div>
           </div>
           <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
@@ -198,7 +183,7 @@ const Exports = () => {
       </section>
 
       <Map />
-      
+
       <Flags />
     </>
   );
