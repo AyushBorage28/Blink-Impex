@@ -7,6 +7,7 @@ import { useTranslation } from "react-i18next";
 import Flags from "../components/Flags";
 import Map from "../components/Map";
 
+
 const Exports = () => {
   const { t } = useTranslation();
 
@@ -197,6 +198,7 @@ const Exports = () => {
       </section>
 
       <Map />
+      
       <Flags />
     </>
   );
